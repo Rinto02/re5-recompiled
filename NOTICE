@@ -1,0 +1,12 @@
+RE5-Recompiled
+
+This project started from a GPL-3.0 Android launcher by Gabrick75
+(https://github.com/gabrick75). It is licensed under the GNU General Public
+License v3.0 (see LICENSE). Parts adapted for Resident Evil 5 remain under
+GPL-3.0.
+
+The ReXGlue SDK (sdk/) and its components keep their own licenses; see
+THIRD_PARTY_NOTICES.md.
+
+This project contains no game files and no code generated from the game.
+Users must supply their own legally obtained copy of the game.

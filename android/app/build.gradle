@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Release signing key, kept outside the repository: RE5_KEYSTORE_PROPERTIES, or
+// ~/.android-keys/re5-recompiled/keystore.properties (storeFile, storePassword, keyAlias, keyPassword).
+// Without it the release build is signed with the debug key, so anyone can build the project.
+def releaseKeyProperties = new Properties()
+def releaseKeyFile = file(System.getenv('RE5_KEYSTORE_PROPERTIES') ?:
+        "${System.getProperty('user.home')}/.android-keys/re5-recompiled/keystore.properties")
+if (releaseKeyFile.exists()) {
+    releaseKeyFile.withInputStream { releaseKeyProperties.load(it) }
+}
+
+// The exact build in every report and session log (all APKs of a version share versionName): the git commit,
+// "+alterado" with uncommitted changes, and the commit's date (not the build's, so BuildConfig stays cacheable).
+def gitOutput = { List<String> command ->
+    try {
+        def process = (['git', '-C', rootDir.parentFile.absolutePath] + command).execute()
+        process.waitFor()
+        return process.exitValue() == 0 ? process.text.trim() : ''
+    } catch (Exception ignored) {
+        return ''
+    }
+}
+def gitCommit = gitOutput(['rev-parse', '--short=8', 'HEAD']) ?: 'desconhecido'
+def gitDirty = gitOutput(['status', '--porcelain', '--untracked-files=no']) ? '+alterado' : ''
+def gitDate = gitOutput(['log', '-1', '--format=%cd', '--date=format:%Y-%m-%d %H:%M']) ?: 'desconhecida'
+
+android {
+    namespace 'com.re5recomp.android'
+    compileSdk 35
+
+    sourceSets {
+        main.java.srcDirs += ["$rootDir/../sdk/thirdparty/sdl3/android-project/app/src/main/java"]
+    }
+
+    defaultConfig {
+        applicationId 'com.re5recomp.android'
+        minSdk 26
+        targetSdk 35
+        versionCode 8
+        versionName '0.4.4'
+        buildConfigField 'String', 'GIT_COMMIT', "\"${gitCommit}${gitDirty}\""
+        buildConfigField 'String', 'GIT_DATE', "\"${gitDate}\""
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+        externalNativeBuild {
+            cmake {
+                cppFlags '-std=c++23'
+                arguments '-DANDROID_STL=c++_shared'
+            }
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    signingConfigs {
+        if (releaseKeyFile.exists()) {
+            release {
+                storeFile file(releaseKeyProperties['storeFile'])
+                storePassword releaseKeyProperties['storePassword']
+                keyAlias releaseKeyProperties['keyAlias']
+                keyPassword releaseKeyProperties['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig releaseKeyFile.exists() ? signingConfigs.release : signingConfigs.debug
+            // AGP builds release natives as RelWithDebInfo (-O2 -g); the game wants the SDK's Release
+            // flags (-O3, no asserts) (src/main/cpp/CMakeLists.txt).
+            externalNativeBuild {
+                cmake {
+                    arguments '-DCMAKE_BUILD_TYPE=Release'
+                }
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+            version '3.30.5'
+        }
+    }
+
+    ndkVersion '28.2.13676358'
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.13.1'
+    implementation 'androidx.documentfile:documentfile:1.0.1'
+    // The launcher's menu (switches, sliders, buttons; the rest is drawn by Menu.java).
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+}

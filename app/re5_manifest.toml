@@ -1,0 +1,40 @@
+# ReXGlue manifest for Resident Evil 5 (Xbox 360), ReXGlue v0.10.x format.
+# file_path is relative to this file. default.xex is YOUR OWN file, git-ignored, never committed.
+
+[project]
+sdk_version = "0.10.0"
+name = "re5"
+
+[entrypoint]
+file_path = "default.xex"
+out_directory_path = "generated"
+includes = []
+
+skip_lr = false
+skip_msr = false
+ctr_as_local = false
+xer_as_local = false
+cr_as_local = false
+reserved_as_local = false
+non_argument_as_local = false
+non_volatile_as_local = false
+generate_exception_handlers = false
+
+[entrypoint.analysis]
+max_jump_extension = 65536
+data_region_threshold = 16
+large_function_threshold = 1048576
+exception_handler_funcs = []
+
+# Function boundaries found on the first codegen runs.
+[entrypoint.functions]
+0x82902010 = { name = "re5_fn_82902010" }
+0x823BF1D0 = { name = "re5_fn_823BF1D0" }
+0x82C14EC8 = { name = "re5_fn_82C14EC8" }
+0x8278E5E0 = { name = "re5_fn_8278E5E0" }
+0x8291D358 = { name = "re5_fn_8291D358" }
+0x82907180 = { name = "re5_fn_82907180" }
+0x82AA4340 = { name = "re5_fn_82AA4340" }
+0x82A98BC4 = { name = "re5_fn_82A98BC4" }
+0x82C99C34 = { name = "re5_fn_82C99C34" }
+0x82C99C64 = { name = "re5_fn_82C99C64" }
