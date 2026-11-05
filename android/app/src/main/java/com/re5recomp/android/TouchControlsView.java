@@ -36,8 +36,7 @@ public final class TouchControlsView extends View {
     static final int START = 0x0010, BACK = 0x0020, LTHUMB = 0x0040, RTHUMB = 0x0080;
     static final int LB = 0x0100, RB = 0x0200, A = 0x1000, B = 0x2000, X = 0x4000, Y = 0x8000;
 
-    private static final int BUTTON = 0, STICK = 1, DPAD = 2, PEDAL = 3, MENU = 4, ARROW = 5;
-    private static final int TRIGGER_NONE = 0, TRIGGER_LEFT = 1, TRIGGER_RIGHT = 2;
+    private static final int BUTTON = 0, STICK = 1, DPAD = 2, MENU = 3, ARROW = 4;
     private static final String PREFS = "re5_controls";
     // 2: the steering arrows got half their first size; a layout saved before keeps theirs out.
     private static final int LAYOUT_VERSION = 2;
@@ -55,7 +54,6 @@ public final class TouchControlsView extends View {
         final String label;
         final String hint;
         final int mask;
-        final int trigger;
         final int color;
         final float defX, defY, defSize;
         final boolean defVisible;
@@ -69,14 +67,13 @@ public final class TouchControlsView extends View {
         float originX, originY;    // stick: where that finger went down
         float knobX, knobY;        // stick: -1..1
 
-        Control(String id, int type, String label, String hint, int mask, int trigger, int color,
+        Control(String id, int type, String label, String hint, int mask, int color,
                 float x, float y, float size, boolean visible) {
             this.id = id;
             this.type = type;
             this.label = label;
             this.hint = hint;
             this.mask = mask;
-            this.trigger = trigger;
             this.color = color;
             this.defX = x;
             this.defY = y;
@@ -160,28 +157,26 @@ public final class TouchControlsView extends View {
 
     private void createControls() {
         final int grey = 0xFF2A3440;
-        // Left hand: steering stick, D-pad, LB.
-        add(new Control("ls", STICK, "", "", 0, TRIGGER_NONE, grey, .15f, .70f, .40f, true));
-        add(new Control("steer_left", ARROW, "", "", 0, TRIGGER_NONE, grey, .06f, .76f, .12f, true));
-        add(new Control("steer_right", ARROW, "", "", 0, TRIGGER_NONE, grey, .15f, .76f, .12f, true));
-        add(new Control("dpad", DPAD, "", "", 0, TRIGGER_NONE, grey, .10f, .30f, .27f, true));
-        add(new Control("lb", BUTTON, "LB", "", LB, TRIGGER_NONE, grey, .07f, .09f, .13f, true));
-        // Right hand: pedals, A/B/X/Y diamond, RB.
-        add(new Control("rt", PEDAL, "", "", 0, TRIGGER_RIGHT, 0xFF1E5E3A, .92f, .70f, .42f, true));
-        add(new Control("lt", PEDAL, "", "", 0, TRIGGER_LEFT, 0xFF6B2323, .80f, .76f, .32f, true));
-        add(new Control("a", BUTTON, "A", "", A, TRIGGER_NONE, 0xFF2E7D32, .78f, .45f, .15f, true));
-        add(new Control("b", BUTTON, "B", "", B, TRIGGER_NONE, 0xFFC62828, .87f, .36f, .15f, true));
-        add(new Control("x", BUTTON, "X", "", X, TRIGGER_NONE, 0xFF1565C0, .69f, .36f, .15f, true));
-        add(new Control("y", BUTTON, "Y", "", Y, TRIGGER_NONE, 0xFFF9A825, .78f, .27f, .15f, true));
-        add(new Control("rb", BUTTON, "RB", "", RB, TRIGGER_NONE, grey, .93f, .09f, .13f, true));
+        // Left hand: steering stick, D-pad and LB.
+        add(new Control("ls", STICK, "", "", 0, grey, .15f, .70f, .40f, true));
+        add(new Control("steer_left", ARROW, "", "", 0, grey, .06f, .76f, .12f, true));
+        add(new Control("steer_right", ARROW, "", "", 0, grey, .15f, .76f, .12f, true));
+        add(new Control("dpad", DPAD, "", "", 0, grey, .10f, .30f, .27f, true));
+        add(new Control("lb", BUTTON, "LB", "", LB, grey, .07f, .09f, .13f, true));
+        // Right hand: A/B/X/Y diamond and RB.
+        add(new Control("a", BUTTON, "A", "", A, 0xFF2E7D32, .78f, .45f, .15f, true));
+        add(new Control("b", BUTTON, "B", "", B, 0xFFC62828, .87f, .36f, .15f, true));
+        add(new Control("x", BUTTON, "X", "", X, 0xFF1565C0, .69f, .36f, .15f, true));
+        add(new Control("y", BUTTON, "Y", "", Y, 0xFFF9A825, .78f, .27f, .15f, true));
+        add(new Control("rb", BUTTON, "RB", "", RB, grey, .93f, .09f, .13f, true));
         // Middle: Back, Start and the editor.
-        add(new Control("back", BUTTON, "BACK", "", BACK, TRIGGER_NONE, grey, .37f, .08f, .10f, true));
-        add(new Control("menu", MENU, "⚙", "", 0, TRIGGER_NONE, grey, .50f, .08f, .09f, true));
-        add(new Control("start", BUTTON, "START", "", START, TRIGGER_NONE, grey, .63f, .08f, .10f, true));
+        add(new Control("back", BUTTON, "BACK", "", BACK, grey, .37f, .08f, .10f, true));
+        add(new Control("menu", MENU, "⚙", "", 0, grey, .50f, .08f, .09f, true));
+        add(new Control("start", BUTTON, "START", "", START, grey, .63f, .08f, .10f, true));
         // Off by default: the camera stick and the stick clicks.
-        add(new Control("rs", STICK, "", "", 0, TRIGGER_NONE, grey, .55f, .72f, .30f, false));
-        add(new Control("l3", BUTTON, "L3", "", LTHUMB, TRIGGER_NONE, grey, .28f, .88f, .11f, false));
-        add(new Control("r3", BUTTON, "R3", "", RTHUMB, TRIGGER_NONE, grey, .45f, .88f, .11f, false));
+        add(new Control("rs", STICK, "", "", 0, grey, .55f, .72f, .30f, false));
+        add(new Control("l3", BUTTON, "L3", "", LTHUMB, grey, .28f, .88f, .11f, false));
+        add(new Control("r3", BUTTON, "R3", "", RTHUMB, grey, .45f, .88f, .11f, false));
     }
 
     private void add(Control c) {
@@ -454,7 +449,7 @@ public final class TouchControlsView extends View {
                 stick.knobX = stick.knobY = 0f;
             }
         }
-        // Buttons, pedals and the D-pad follow the fingers, so a thumb can slide from gas to brake.
+        // Buttons and the D-pad follow the fingers.
         for (int i = 0; i < event.getPointerCount(); i++) {
             if (i == liftedIndex || holdsStick(event.getPointerId(i))) {
                 continue;
@@ -590,10 +585,6 @@ public final class TouchControlsView extends View {
 
     private boolean contains(Control c, float px, float py, float slack, float w, float h) {
         float cx = c.x * w, cy = c.y * h;
-        if (c.type == PEDAL) {
-            float halfW = pedalWidth(c, h) * .5f * slack, halfH = c.size * h * .5f * slack;
-            return Math.abs(px - cx) <= halfW && Math.abs(py - cy) <= halfH;
-        }
         float dx = px - cx, dy = py - cy;
         float r = radius(c, h) * slack;
         return dx * dx + dy * dy <= r * r;
@@ -601,10 +592,6 @@ public final class TouchControlsView extends View {
 
     private float radius(Control c, float h) {
         return c.size * h * .5f;
-    }
-
-    private float pedalWidth(Control c, float h) {
-        return c.size * h * .55f;
     }
 
     private void releaseAll() {
@@ -701,9 +688,6 @@ public final class TouchControlsView extends View {
                 } else if (c.type == STICK) {
                     rx = axis(c.knobX);
                     ry = axis(-c.knobY);
-                } else if (c.type == PEDAL && c.pressed) {
-                    if (c.trigger == TRIGGER_LEFT) lt = 255;
-                    else rt = 255;
                 }
             }
             // The arrows steer while held and until the wheel is back in the centre.
@@ -762,12 +746,7 @@ public final class TouchControlsView extends View {
                 float cx = c.x * w, cy = c.y * h;
                 dashed.setStrokeWidth(3f);
                 dashed.setColor(c == selected ? 0xFFFFC107 : 0x88FFFFFF);
-                if (c.type == PEDAL) {
-                    float hw = pedalWidth(c, h) * .5f + 8f, hh = c.size * h * .5f + 8f;
-                    canvas.drawRect(cx - hw, cy - hh, cx + hw, cy + hh, dashed);
-                } else {
-                    canvas.drawCircle(cx, cy, radius(c, h) + 8f, dashed);
-                }
+                canvas.drawCircle(cx, cy, radius(c, h) + 8f, dashed);
                 if (!c.visible) {
                     text.setColor(0xFFFFFFFF);
                     text.setTextSize(Math.max(22f, radius(c, h) * .28f));
@@ -831,25 +810,6 @@ public final class TouchControlsView extends View {
                     stroke.setColor(withAlpha(0xFFFFFFFF, a * 240 / 255));
                     canvas.drawArc(rect, 270f, (left ? -360f : 360f) * Math.min(turned, 1f), false, stroke);
                 }
-                break;
-            }
-            case PEDAL: {
-                float hw = pedalWidth(c, h) * .5f, hh = c.size * h * .5f;
-                rect.set(cx - hw, cy - hh, cx + hw, cy + hh);
-                float corner = hw * .35f;
-                fill.setColor(withAlpha(c.pressed ? 0xFFFF9A32 : c.color, a * 200 / 255));
-                canvas.drawRoundRect(rect, corner, corner, fill);
-                stroke.setStrokeWidth(Math.max(2f, hw * .05f));
-                stroke.setColor(withAlpha(c.pressed ? 0xFFFFD18A : 0xFFEAF2FA, a * 190 / 255));
-                canvas.drawRoundRect(rect, corner, corner, stroke);
-                // Grip lines, like a pedal.
-                stroke.setStrokeWidth(Math.max(2f, hw * .04f));
-                for (int i = -2; i <= 2; i++) {
-                    float ly = cy + i * hh * .16f + hh * .25f;
-                    canvas.drawLine(cx - hw * .55f, ly, cx + hw * .55f, ly, stroke);
-                }
-                label(canvas, c.label, cx, cy - hh * .45f, hw * .36f, a);
-                label(canvas, c.hint, cx, cy - hh * .45f + hw * .42f, hw * .22f, a);
                 break;
             }
             default: {
