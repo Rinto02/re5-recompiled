@@ -71,6 +71,7 @@ Early stage. The code generator is still being brought up for this game, and the
 **To play (once it works)**
 
 - Android 8.0 or later on an ARM64 processor, with a GPU that supports Vulkan 1.1 or later.
+- Testing device: Qualcomm Snapdragon 8s Gen 4 (device testing has not started yet).
 - Your own copy of Resident Evil 5 for Xbox 360, dumped from your own disc.
 
 ## Building from source
