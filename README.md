@@ -1,6 +1,6 @@
 <div align="center">
 
-# RE5 Recompiled
+# RE5-Recompiled
 
 **An unofficial static recompilation of Resident Evil 5 (Xbox 360) for Android and Linux**
 
@@ -30,7 +30,7 @@
 
 ## Overview
 
-RE5 Recompiled translates the PowerPC code of the Xbox 360 executable of Resident Evil 5 into C++ ahead of time
+RE5-Recompiled translates the PowerPC code of the Xbox 360 executable of Resident Evil 5 into C++ ahead of time
 and compiles it into a native program for ARM64 Android phones and x86-64 Linux. It is built on the
 [ReXGlue SDK](https://github.com/rexglue/rexglue-sdk), which provides the Xbox 360 kernel, the runtime and the
 emulation of the console's GPU on Vulkan.
@@ -155,6 +155,6 @@ Bug reports and pull requests are welcome. Please:
 
 ## License
 
-RE5 Recompiled is free software, licensed under the [GNU General Public License v3.0](LICENSE). The ReXGlue SDK in
+RE5-Recompiled is free software, licensed under the [GNU General Public License v3.0](LICENSE). The ReXGlue SDK in
 `sdk/` and this project's changes to it are licensed under the BSD-3-Clause license. Third-party components keep
 their own licenses, listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

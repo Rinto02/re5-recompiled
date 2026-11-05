@@ -11,7 +11,7 @@
         android:appCategory="game"
         android:isGame="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="RE5 Recompiled"
+        android:label="RE5-Recompiled"
         android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher"
         android:theme="@android:style/Theme.Material.NoActionBar"
