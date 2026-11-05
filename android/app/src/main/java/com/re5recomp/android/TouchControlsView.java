@@ -36,11 +36,11 @@ public final class TouchControlsView extends View {
     static final int START = 0x0010, BACK = 0x0020, LTHUMB = 0x0040, RTHUMB = 0x0080;
     static final int LB = 0x0100, RB = 0x0200, A = 0x1000, B = 0x2000, X = 0x4000, Y = 0x8000;
 
-    private static final int BUTTON = 0, STICK = 1, DPAD = 2, TRIGGER_CONTROL = 3, MENU = 4, ARROW = 5;
+    private static final int BUTTON = 0, STICK = 1, DPAD = 2, PEDAL = 3, MENU = 4, ARROW = 5;
     private static final int TRIGGER_NONE = 0, TRIGGER_LEFT = 1, TRIGGER_RIGHT = 2;
     private static final String PREFS = "re5_controls";
-    // 4: replace the racing layout with an Xbox-style gamepad layout.
-    private static final int LAYOUT_VERSION = 4;
+    // 2: the steering arrows got half their first size; a layout saved before keeps theirs out.
+    private static final int LAYOUT_VERSION = 2;
     // Steering arrows: seconds from the centre to full lock while held, and from full lock back to the centre
     // once let go (faster, like a wheel that straightens itself).
     private static final float ARROW_RAMP_SECONDS = .25f, ARROW_RETURN_SECONDS = .1f;
@@ -107,15 +107,10 @@ public final class TouchControlsView extends View {
     private final List<Control> controls = new ArrayList<>();
     private final Paint fill = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint stroke = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private final Paint shellFill = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private final Paint shellEdge = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private final Paint shellHighlight = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint text = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint dashed = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final RectF rect = new RectF();
     private final Path arrowPath = new Path();
-    private final Path shellPath = new Path();
-    private final Path shellSeam = new Path();
     private final SharedPreferences prefs;
     private Host host;
 
@@ -151,8 +146,6 @@ public final class TouchControlsView extends View {
         text.setTypeface(Typeface.DEFAULT_BOLD);
         text.setTextAlign(Paint.Align.CENTER);
         stroke.setStyle(Paint.Style.STROKE);
-        shellEdge.setStyle(Paint.Style.STROKE);
-        shellHighlight.setStyle(Paint.Style.STROKE);
         dashed.setStyle(Paint.Style.STROKE);
         dashed.setPathEffect(new DashPathEffect(new float[] {14f, 10f}, 0f));
         createControls();
@@ -167,24 +160,28 @@ public final class TouchControlsView extends View {
 
     private void createControls() {
         final int grey = 0xFF2A3440;
-        add(new Control("ls", STICK, "", "", 0, TRIGGER_NONE, grey, .32f, .49f, .30f, true));
-        add(new Control("steer_left", ARROW, "", "", 0, TRIGGER_NONE, grey, .09f, .78f, .12f, true));
-        add(new Control("steer_right", ARROW, "", "", 0, TRIGGER_NONE, grey, .18f, .78f, .12f, true));
-        add(new Control("dpad", DPAD, "", "", 0, TRIGGER_NONE, grey, .18f, .70f, .23f, true));
-        add(new Control("lt", TRIGGER_CONTROL, "LT", "", 0, TRIGGER_LEFT, grey, .17f, .17f, .12f, true));
-        add(new Control("lb", BUTTON, "LB", "", LB, TRIGGER_NONE, grey, .32f, .26f, .11f, true));
-        add(new Control("rt", TRIGGER_CONTROL, "RT", "", 0, TRIGGER_RIGHT, grey, .83f, .17f, .12f, true));
-        add(new Control("rb", BUTTON, "RB", "", RB, TRIGGER_NONE, grey, .68f, .26f, .11f, true));
-        add(new Control("a", BUTTON, "A", "", A, TRIGGER_NONE, 0xFF2E7D32, .86f, .56f, .12f, true));
-        add(new Control("b", BUTTON, "B", "", B, TRIGGER_NONE, 0xFFC62828, .92f, .48f, .12f, true));
-        add(new Control("x", BUTTON, "X", "", X, TRIGGER_NONE, 0xFF1565C0, .80f, .48f, .12f, true));
-        add(new Control("y", BUTTON, "Y", "", Y, TRIGGER_NONE, 0xFFF9A825, .86f, .40f, .12f, true));
-        add(new Control("back", BUTTON, "BACK", "", BACK, TRIGGER_NONE, grey, .46f, .43f, .08f, true));
-        add(new Control("menu", MENU, "⚙", "", 0, TRIGGER_NONE, grey, .50f, .36f, .07f, true));
-        add(new Control("start", BUTTON, "START", "", START, TRIGGER_NONE, grey, .54f, .43f, .08f, true));
-        add(new Control("rs", STICK, "", "", 0, TRIGGER_NONE, grey, .66f, .70f, .27f, true));
-        add(new Control("l3", BUTTON, "L3", "", LTHUMB, TRIGGER_NONE, grey, .36f, .87f, .10f, false));
-        add(new Control("r3", BUTTON, "R3", "", RTHUMB, TRIGGER_NONE, grey, .60f, .87f, .10f, false));
+        // Left hand: steering stick, D-pad, LB.
+        add(new Control("ls", STICK, "", "", 0, TRIGGER_NONE, grey, .15f, .70f, .40f, true));
+        add(new Control("steer_left", ARROW, "", "", 0, TRIGGER_NONE, grey, .06f, .76f, .12f, true));
+        add(new Control("steer_right", ARROW, "", "", 0, TRIGGER_NONE, grey, .15f, .76f, .12f, true));
+        add(new Control("dpad", DPAD, "", "", 0, TRIGGER_NONE, grey, .10f, .30f, .27f, true));
+        add(new Control("lb", BUTTON, "LB", "", LB, TRIGGER_NONE, grey, .07f, .09f, .13f, true));
+        // Right hand: pedals, A/B/X/Y diamond, RB.
+        add(new Control("rt", PEDAL, "", "", 0, TRIGGER_RIGHT, 0xFF1E5E3A, .92f, .70f, .42f, true));
+        add(new Control("lt", PEDAL, "", "", 0, TRIGGER_LEFT, 0xFF6B2323, .80f, .76f, .32f, true));
+        add(new Control("a", BUTTON, "A", "", A, TRIGGER_NONE, 0xFF2E7D32, .78f, .45f, .15f, true));
+        add(new Control("b", BUTTON, "B", "", B, TRIGGER_NONE, 0xFFC62828, .87f, .36f, .15f, true));
+        add(new Control("x", BUTTON, "X", "", X, TRIGGER_NONE, 0xFF1565C0, .69f, .36f, .15f, true));
+        add(new Control("y", BUTTON, "Y", "", Y, TRIGGER_NONE, 0xFFF9A825, .78f, .27f, .15f, true));
+        add(new Control("rb", BUTTON, "RB", "", RB, TRIGGER_NONE, grey, .93f, .09f, .13f, true));
+        // Middle: Back, Start and the editor.
+        add(new Control("back", BUTTON, "BACK", "", BACK, TRIGGER_NONE, grey, .37f, .08f, .10f, true));
+        add(new Control("menu", MENU, "⚙", "", 0, TRIGGER_NONE, grey, .50f, .08f, .09f, true));
+        add(new Control("start", BUTTON, "START", "", START, TRIGGER_NONE, grey, .63f, .08f, .10f, true));
+        // Off by default: the camera stick and the stick clicks.
+        add(new Control("rs", STICK, "", "", 0, TRIGGER_NONE, grey, .55f, .72f, .30f, false));
+        add(new Control("l3", BUTTON, "L3", "", LTHUMB, TRIGGER_NONE, grey, .28f, .88f, .11f, false));
+        add(new Control("r3", BUTTON, "R3", "", RTHUMB, TRIGGER_NONE, grey, .45f, .88f, .11f, false));
     }
 
     private void add(Control c) {
@@ -192,13 +189,11 @@ public final class TouchControlsView extends View {
     }
 
     private void load() {
-        int layoutVersion = prefs.getInt("layout_version", 1);
         opacity = prefs.getFloat("opacity", opacity);
         haptics = prefs.getBoolean("haptics", haptics);
         tiltSteering = prefs.getBoolean("tilt", tiltSteering);
         tiltSensitivity = prefs.getFloat("tilt_sensitivity", tiltSensitivity);
-        steeringArrows = layoutVersion < LAYOUT_VERSION ? false
-            : prefs.getBoolean("steering_arrows", steeringArrows);
+        steeringArrows = prefs.getBoolean("steering_arrows", steeringArrows);
         arrowLock = prefs.getFloat("arrow_lock", arrowLock);
         hideWithGamepad = prefs.getBoolean("hide_with_gamepad", hideWithGamepad);
         stretch = prefs.getBoolean("stretch", stretch);
@@ -206,13 +201,11 @@ public final class TouchControlsView extends View {
         if (json == null) {
             return;
         }
-        if (layoutVersion < LAYOUT_VERSION) {
-            return;
-        }
+        boolean oldArrows = prefs.getInt("layout_version", 1) < 2;
         try {
             JSONObject all = new JSONObject(json);
             for (Control c : controls) {
-                JSONObject o = all.optJSONObject(c.id);
+                JSONObject o = oldArrows && c.type == ARROW ? null : all.optJSONObject(c.id);
                 if (o != null) {
                     c.x = clamp((float) o.optDouble("x", c.defX), 0f, 1f);
                     c.y = clamp((float) o.optDouble("y", c.defY), 0f, 1f);
@@ -461,7 +454,7 @@ public final class TouchControlsView extends View {
                 stick.knobX = stick.knobY = 0f;
             }
         }
-        // Buttons, triggers and the D-pad follow the fingers.
+        // Buttons, pedals and the D-pad follow the fingers, so a thumb can slide from gas to brake.
         for (int i = 0; i < event.getPointerCount(); i++) {
             if (i == liftedIndex || holdsStick(event.getPointerId(i))) {
                 continue;
@@ -597,8 +590,8 @@ public final class TouchControlsView extends View {
 
     private boolean contains(Control c, float px, float py, float slack, float w, float h) {
         float cx = c.x * w, cy = c.y * h;
-        if (c.type == TRIGGER_CONTROL) {
-            float halfW = triggerWidth(c, h) * .5f * slack, halfH = c.size * h * .5f * slack;
+        if (c.type == PEDAL) {
+            float halfW = pedalWidth(c, h) * .5f * slack, halfH = c.size * h * .5f * slack;
             return Math.abs(px - cx) <= halfW && Math.abs(py - cy) <= halfH;
         }
         float dx = px - cx, dy = py - cy;
@@ -610,8 +603,8 @@ public final class TouchControlsView extends View {
         return c.size * h * .5f;
     }
 
-    private float triggerWidth(Control c, float h) {
-        return c.size * h * 1.55f;
+    private float pedalWidth(Control c, float h) {
+        return c.size * h * .55f;
     }
 
     private void releaseAll() {
@@ -708,7 +701,7 @@ public final class TouchControlsView extends View {
                 } else if (c.type == STICK) {
                     rx = axis(c.knobX);
                     ry = axis(-c.knobY);
-                } else if (c.type == TRIGGER_CONTROL && c.pressed) {
+                } else if (c.type == PEDAL && c.pressed) {
                     if (c.trigger == TRIGGER_LEFT) lt = 255;
                     else rt = 255;
                 }
@@ -759,7 +752,6 @@ public final class TouchControlsView extends View {
         if (editing) {
             canvas.drawColor(0x66000000);
         }
-        drawControllerShell(canvas, w, h, editing ? 1f : opacity);
         for (Control c : controls) {
             if (!inMode(c) || (!c.visible && !editing)) {
                 continue;
@@ -770,8 +762,8 @@ public final class TouchControlsView extends View {
                 float cx = c.x * w, cy = c.y * h;
                 dashed.setStrokeWidth(3f);
                 dashed.setColor(c == selected ? 0xFFFFC107 : 0x88FFFFFF);
-                if (c.type == TRIGGER_CONTROL) {
-                    float hw = triggerWidth(c, h) * .5f + 8f, hh = c.size * h * .5f + 8f;
+                if (c.type == PEDAL) {
+                    float hw = pedalWidth(c, h) * .5f + 8f, hh = c.size * h * .5f + 8f;
                     canvas.drawRect(cx - hw, cy - hh, cx + hw, cy + hh, dashed);
                 } else {
                     canvas.drawCircle(cx, cy, radius(c, h) + 8f, dashed);
@@ -783,46 +775,6 @@ public final class TouchControlsView extends View {
                 }
             }
         }
-    }
-
-    private void drawControllerShell(Canvas canvas, float w, float h, float alpha) {
-        shellPath.rewind();
-        shellPath.moveTo(w * .16f, h * .26f);
-        shellPath.cubicTo(w * .21f, h * .22f, w * .27f, h * .23f, w * .34f, h * .27f);
-        shellPath.cubicTo(w * .41f, h * .31f, w * .45f, h * .33f, w * .50f, h * .33f);
-        shellPath.cubicTo(w * .55f, h * .33f, w * .59f, h * .31f, w * .66f, h * .27f);
-        shellPath.cubicTo(w * .73f, h * .23f, w * .79f, h * .22f, w * .84f, h * .26f);
-        shellPath.cubicTo(w * .92f, h * .25f, w * .97f, h * .31f, w * .98f, h * .41f);
-        shellPath.cubicTo(w, h * .52f, w * .94f, h * .68f, w * .92f, h * .76f);
-        shellPath.cubicTo(w * .90f, h * .86f, w * .85f, h * .90f, w * .80f, h * .88f);
-        shellPath.cubicTo(w * .74f, h * .86f, w * .71f, h * .77f, w * .68f, h * .72f);
-        shellPath.cubicTo(w * .65f, h * .68f, w * .60f, h * .66f, w * .55f, h * .66f);
-        shellPath.lineTo(w * .45f, h * .66f);
-        shellPath.cubicTo(w * .40f, h * .66f, w * .35f, h * .68f, w * .32f, h * .72f);
-        shellPath.cubicTo(w * .29f, h * .77f, w * .26f, h * .86f, w * .20f, h * .88f);
-        shellPath.cubicTo(w * .15f, h * .90f, w * .10f, h * .86f, w * .08f, h * .76f);
-        shellPath.cubicTo(w * .06f, h * .68f, 0, h * .52f, w * .02f, h * .41f);
-        shellPath.cubicTo(w * .03f, h * .31f, w * .08f, h * .25f, w * .16f, h * .26f);
-        shellPath.close();
-
-        int baseAlpha = Math.round(clamp(alpha, 0f, 1f) * 255f);
-        shellFill.setColor(withAlpha(0xFF1B222A, baseAlpha * 165 / 255));
-        canvas.drawPath(shellPath, shellFill);
-        shellEdge.setStrokeWidth(Math.max(2f, h * .006f));
-        shellEdge.setColor(withAlpha(0xFFAFBAC5, baseAlpha * 150 / 255));
-        canvas.drawPath(shellPath, shellEdge);
-
-        shellSeam.rewind();
-        shellSeam.moveTo(w * .12f, h * .47f);
-        shellSeam.cubicTo(w * .13f, h * .61f, w * .16f, h * .76f, w * .24f, h * .83f);
-        shellSeam.moveTo(w * .88f, h * .47f);
-        shellSeam.cubicTo(w * .87f, h * .61f, w * .84f, h * .76f, w * .76f, h * .83f);
-        shellSeam.moveTo(w * .37f, h * .35f);
-        shellSeam.cubicTo(w * .43f, h * .39f, w * .46f, h * .40f, w * .50f, h * .40f);
-        shellSeam.cubicTo(w * .54f, h * .40f, w * .57f, h * .39f, w * .63f, h * .35f);
-        shellHighlight.setStrokeWidth(Math.max(1.5f, h * .003f));
-        shellHighlight.setColor(withAlpha(0xFFE0E6EC, baseAlpha * 65 / 255));
-        canvas.drawPath(shellSeam, shellHighlight);
     }
 
     private void drawControl(Canvas canvas, Control c, float alpha, float w, float h) {
@@ -881,8 +833,8 @@ public final class TouchControlsView extends View {
                 }
                 break;
             }
-            case TRIGGER_CONTROL: {
-                float hw = triggerWidth(c, h) * .5f, hh = c.size * h * .5f;
+            case PEDAL: {
+                float hw = pedalWidth(c, h) * .5f, hh = c.size * h * .5f;
                 rect.set(cx - hw, cy - hh, cx + hw, cy + hh);
                 float corner = hw * .35f;
                 fill.setColor(withAlpha(c.pressed ? 0xFFFF9A32 : c.color, a * 200 / 255));
@@ -890,7 +842,14 @@ public final class TouchControlsView extends View {
                 stroke.setStrokeWidth(Math.max(2f, hw * .05f));
                 stroke.setColor(withAlpha(c.pressed ? 0xFFFFD18A : 0xFFEAF2FA, a * 190 / 255));
                 canvas.drawRoundRect(rect, corner, corner, stroke);
-                label(canvas, c.label, cx, cy + hh * .34f, hh * .75f, a);
+                // Grip lines, like a pedal.
+                stroke.setStrokeWidth(Math.max(2f, hw * .04f));
+                for (int i = -2; i <= 2; i++) {
+                    float ly = cy + i * hh * .16f + hh * .25f;
+                    canvas.drawLine(cx - hw * .55f, ly, cx + hw * .55f, ly, stroke);
+                }
+                label(canvas, c.label, cx, cy - hh * .45f, hw * .36f, a);
+                label(canvas, c.hint, cx, cy - hh * .45f + hw * .42f, hw * .22f, a);
                 break;
             }
             default: {
