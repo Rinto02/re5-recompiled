@@ -52,13 +52,11 @@ from this repository by `.gitignore`.
 
 ## Project status
 
-Early stage. The code generator is still being brought up for this game, and the game does not boot yet.
+Early stage. **Milestone: the game now boots and runs on Android**, tested on a device with a Qualcomm Snapdragon 8s Gen 4.
 
-- **Done:** the ReXGlue SDK builds, the project manifest is in place (`app/re5_manifest.toml`), and the app
-  skeleton (`app/src/main.cpp`, `app/src/re5_app.h`) is ready for the generated code.
-- **Next:** finish code generation, fix the unresolved functions it reports, then boot the generated game on
-  desktop and fill in the kernel functions it needs.
-- **Later:** the Android build and phone testing.
+- **Known issues:** performance is around 10 FPS after the game starts; using an imported Turnip driver can cause
+  severe graphical corruption.
+- **Next:** improve performance and graphics compatibility, then continue testing on Android.
 
 ## Requirements
 
@@ -68,10 +66,10 @@ Early stage. The code generator is still being brought up for this game, and the
 - About 20 GB of free disk space and 12 GB of RAM or more (the generated code is large).
 - For Android: Java 17 or later, the Android SDK with NDK 28.2.13676358 and CMake 3.30.5.
 
-**To play (once it works)**
+**To play**
 
 - Android 8.0 or later on an ARM64 processor, with a GPU that supports Vulkan 1.1 or later.
-- Testing device: Qualcomm Snapdragon 8s Gen 4 (device testing has not started yet).
+- Tested device: Qualcomm Snapdragon 8s Gen 4.
 - Your own copy of Resident Evil 5 for Xbox 360, dumped from your own disc.
 
 ## Building from source
@@ -106,8 +104,9 @@ Early stage. The code generator is still being brought up for this game, and the
 
 ## Running on Android
 
-Not available yet. The Android launcher and native layer are in `android/`, but they are not connected to a
-working game build. This section will be updated once the game boots on desktop.
+The game now boots and runs on Android, tested on Qualcomm Snapdragon 8s Gen 4. Performance is currently around
+10 FPS after startup, and imported Turnip drivers may cause severe graphical corruption. Use your own game files;
+the project does not distribute game builds or content.
 
 ## Repository layout
 
