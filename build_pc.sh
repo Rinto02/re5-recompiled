@@ -1,12 +1,12 @@
 #!/bin/bash
-# Build completo do PC (passo 5 do tutorial) sem nada manual: SDK host (rexglue) ->
+# Build completo do PC sem nada manual: SDK host (rexglue) ->
 # codegen (app/generated) -> cmake configure -> cmake build.
 # Idempotente: o ninja pula o que já está feito; o codegen roda sempre.
 #
 #   ./build_pc.sh
 #
-# Precisa antes: passo 4 do tutorial (assets/game_root com default.xex extraído
-# do seu próprio ISO). O resto (thirdparty, binário rexglue, generated) é feito aqui.
+# Precisa antes: seu próprio default.xex em app/default.xex. O resto (thirdparty,
+# binário rexglue, generated) é feito aqui.
 set -euo pipefail
 
 RAIZ=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
@@ -18,10 +18,9 @@ PYBIN=${PYTHON:-python3}
 MARCHA=${MARCH:-x86-64-v3}
 
 # ---- 0. jogo extraído (não há como baixar: é do ISO do jogador) ----
-if [ ! -f "$RAIZ/assets/game_root/default.xex" ]; then
-  echo "ERRO: assets/game_root/default.xex não encontrado." >&2
-  echo "      Extraia seu próprio ISO primeiro (passo 4 do tutorial):" >&2
-  echo "      python3 tools/fase1_extraer.py /caminho/para/SeuRE5.iso -o assets/game_root" >&2
+if [ ! -f "$RAIZ/app/default.xex" ]; then
+  echo "ERRO: app/default.xex não encontrado." >&2
+  echo "      Coloque seu próprio default.xex em app/ antes de compilar." >&2
   exit 1
 fi
 
