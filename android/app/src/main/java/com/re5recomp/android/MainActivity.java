@@ -74,7 +74,7 @@ public final class MainActivity extends AppCompatActivity {
     private static final String TREE_URI = "tree_uri";
     // Relative to the internal storage root (the "jogos" folder holds the user's games).
     static final String GAME_FOLDER_NAME = "RE5";
-    static final String PROJECT_URL = "https://github.com/Gabrick75/re5-recompiled";
+    static final String PROJECT_URL = "https://github.com/Rinto02/re5-recompiled";
 
     private TextView importStatus;
     private LinearLayout checksList;
@@ -357,7 +357,7 @@ public final class MainActivity extends AppCompatActivity {
 
     private ImageView appIcon(int sizeDp) {
         ImageView icon = new ImageView(this);
-        icon.setImageResource(R.mipmap.ic_logo);
+        icon.setImageResource(R.drawable.ic_re5_mark);
         icon.setScaleType(ImageView.ScaleType.CENTER_CROP);
         icon.setBackground(Menu.rounded(Menu.GROUP, dp(sizeDp * 0.24f)));
         icon.setClipToOutline(true);
@@ -1937,7 +1937,7 @@ ui.footer(tr(R.string.a_disc_image_the_xbox_360, GAME_FOLDER_NAME)),
                         rootProfile),
                 ui.footer(tr(R.string.logs_and_device_information_in_a)),
                 ui.header(tr(R.string.project)),
-                ui.group(ui.actionRow(tr(R.string.gabrick75_on_github),
+                ui.group(ui.actionRow(tr(R.string.rinto02_on_github),
                         PROJECT_URL.replace("https://", ""), false, view -> {
                     try {
                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PROJECT_URL)));

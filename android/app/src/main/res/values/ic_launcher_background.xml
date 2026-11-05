@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Same colour as the gauge dial in ic_launcher_foreground. -->
-    <color name="ic_launcher_background">#16161A</color>
+    <color name="ic_launcher_background">#100F13</color>
 </resources>
