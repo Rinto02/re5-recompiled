@@ -1904,7 +1904,7 @@ ui.footer(tr(R.string.a_disc_image_the_xbox_360, GAME_FOLDER_NAME)),
         hero.addView(appIcon(56), new LinearLayout.LayoutParams(dp(56), dp(56)));
         LinearLayout names = ui.column();
         names.setPadding(dp(14), 0, 0, 0);
-        names.addView(ui.text("RE5-Recompiled", 19, Menu.PRIMARY, true));
+        names.addView(ui.text("RE5 Recompiled", 19, Menu.PRIMARY, true));
         names.addView(ui.text(tr(R.string.re5_for_the_xbox), 13, Menu.SECONDARY, false));
         String version = "";
         try {
