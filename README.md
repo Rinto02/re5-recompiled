@@ -10,9 +10,8 @@
 
 > [!IMPORTANT]
 > This is a non-commercial fan project for interoperability and preservation research. It is **not** affiliated
-> with, endorsed by or sponsored by Capcom, Microsoft, or any other rights holder. **This repository contains no
-> game files and no game code.** Any build you make needs files extracted from your own legally obtained copy of
-> the game. See [Legal](#legal).
+> with, endorsed by or sponsored by Capcom, Microsoft, or any other rights holder. A playable local build needs
+> files extracted from your own legally obtained copy of the game. See [Legal](#legal).
 
 ## Table of contents
 
@@ -105,8 +104,8 @@ Early stage. **Milestone: the game now boots and runs on Android**, tested on a 
 ## Running on Android
 
 The game now boots and runs on Android, tested on Qualcomm Snapdragon 8s Gen 4. Performance is currently around
-10 FPS after startup, and imported Turnip drivers may cause severe graphical corruption. Use your own game files;
-the project does not distribute game builds or content.
+10 FPS after startup, and imported Turnip drivers may cause severe graphical corruption. A playable local build
+uses game files and generated game code from your own legally obtained copy.
 
 ## Repository layout
 
@@ -121,8 +120,8 @@ the project does not distribute game builds or content.
 
 Bug reports and pull requests are welcome. Please:
 
-- never attach or link game files, dumps, generated code, or builds;
-- do not ask for game files or builds: such requests will be closed;
+- do not attach or link original game files, dumps, generated game code, or APKs containing game-derived code;
+- do not request game files or binaries containing game-derived code;
 - describe your setup (OS, GPU, Android version if relevant) when reporting a problem.
 
 ## Credits
@@ -137,10 +136,10 @@ Bug reports and pull requests are welcome. Please:
 
 ## Legal
 
-- **No game content in the repository.** This repository contains only original source code and open-source code
-  under the licenses listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). It does not contain, and will
-  never contain, the game's executable, data files, assets, audio, video, artwork, logos or code generated from
-  the game.
+- **Share the project source; keep game material separate.** Project source is available under the licenses listed
+  in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The original game executable and assets are not tracked here.
+  Android builds generate game-specific code locally from the user's own game copy; do not redistribute that code or
+  binaries containing it.
 - **Own copy required.** You must own a legitimate copy of the game and use your own dump of it. This project
   does not provide, and does not explain how to obtain, copies of the game.
 - **No Microsoft code.** This project does not include code from the Xbox development kit or other proprietary
