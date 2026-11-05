@@ -28,6 +28,7 @@ exception_handler_funcs = []
 
 # Function boundaries found on the first codegen runs.
 [entrypoint.functions]
+0x8291D728 = { name = "re5_fn_8291D728", size = 8 }
 0x82902010 = { name = "re5_fn_82902010" }
 0x823BF1D0 = { name = "re5_fn_823BF1D0" }
 0x82C14EC8 = { name = "re5_fn_82C14EC8" }
