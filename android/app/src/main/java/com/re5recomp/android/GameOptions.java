@@ -145,7 +145,7 @@ final class GameOptions {
     static String defaultOf(String key) {
         switch (key) {
             case RESOLUTION: return RES_NATIVE;
-            case RENDERER: return "native";
+            case RENDERER: return "emulated";
             case PRESENT_MODE: return "fifo";
             case HDR_PAPER_WHITE: return "200";  // Pinyon Shift's default
             case HDR_HIGHLIGHTS: return "0.5";
@@ -558,16 +558,11 @@ final class GameOptions {
         args.add("--re5_reflexo_faces=" + (flag(context, REFLECTION_STAGGER) ? 2 : 6));
         // World detail: the game's TrackSettings.xml rewritten at start (re5_mundo.cpp), both renderers; grass is the
         // native renderer's (the vegetation's fade distances in its draws).
-        args.add("--re5_mundo_grama=" + worldFactor(context, WORLD_GRASS));
-        args.add("--re5_mundo_objetos=" + worldFactor(context, WORLD_OBJECTS));
-        args.add("--re5_mundo_reflexos=" + worldFactor(context, WORLD_REFLECTIONS));
-        args.add("--re5_mundo_sombras=" + worldFactor(context, WORLD_SHADOWS));
-        args.add("--re5_mundo_multidao=" + worldFactor(context, WORLD_CROWD));
         GameLanguage language = gameLanguage(context);
         args.add("--user_language=" + language.language);
         args.add("--user_country=" + language.country);
         args.add("--user_gamertag=" + gamertag(context));
-        if ("native".equals(get(context, RENDERER))) {
+        if (false && "native".equals(get(context, RENDERER))) {
             // NFSMW Android Evolved's renderer built for RE5 (app/src/nativo): the ring is drawn with translated
             // shaders, no EDRAM emulation. The emulated GPU's arguments below are then ignored; these are its own.
             args.add("--nfsmw_renderizador=nativo");

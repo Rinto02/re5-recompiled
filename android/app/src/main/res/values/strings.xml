@@ -84,7 +84,7 @@
     <string name="experimental_the_copy_of_the_finished">Experimental. Copies the scene\'s image only when an effect needs it, like the raindrops, and spares the GPU the rest of the time. It turns itself off if it sees a difference.</string>
     <string name="experimental_when_the_game_copies_an">Experimental. When the game reuses an image it drew, it is copied straight on the GPU, which is faster. Turn it off if an image looks wrong.</string>
     <string name="export">" · export"</string>
-    <string name="export_copies_your_progress_profile_and">Export copies your progress (profile and saves). Import replaces the current progress with an export or one of the automatic backups (jogos/%1$s-saves). To take the save to another phone, copy the exported folder to the same place on it and import.</string>
+    <string name="export_copies_your_progress_profile_and">Export copies your progress (profile and saves). Import replaces the current progress with an export or one of the automatic backups (%1$s-saves). To take the save to another phone, copy the exported folder to the same place on it and import.</string>
     <string name="export_the_save">Export the save</string>
     <string name="extra_sharpness_cas_fsr">Extra sharpness (CAS/FSR)</string>
     <string name="extra_sharpness_on_top_of_cas">Extra sharpness on top of CAS or FSR: 0 keeps the default. Takes effect the next time the game starts.</string>
@@ -194,7 +194,7 @@
     <string name="no_achievements_yet">No achievements yet</string>
     <string name="no_root_the_phone_is_not">No root: the phone is not rooted or the permission was denied. The performance profile will not be recorded.</string>
     <string name="no_root_the_phone_is_not_2">No root: the phone is not rooted or the permission was denied. The usual diagnostics are still available.</string>
-    <string name="no_save_to_import_in_jogos">No save to import in jogos/</string>
+    <string name="no_save_to_import_in_jogos">No save to import in Internal storage/</string>
     <string name="not_applied_yet">Not applied yet</string>
     <string name="not_tested">not tested</string>
     <string name="not_tested_yet">Not tested yet.</string>
@@ -247,7 +247,7 @@
     <string name="reuses_the_already_converted_indices_the">Reuses the already prepared geometry data that has not changed since the previous frame, instead of preparing it again.</string>
     <string name="reuses_the_vertices_the_game_has" formatted="false">Reuses the geometry that has not changed since the previous frame instead of sending it to the GPU again: 87 % less data and up to +35 % FPS.</string>
     <string name="save_diagnostics_zip">Save diagnostics (ZIP)</string>
-    <string name="save_exported_to_jogos">Save exported to jogos/</string>
+    <string name="save_exported_to_jogos">Save exported to Internal storage/</string>
     <string name="save_imported_from">"Save imported from "</string>
     <string name="save_name">Save</string>
     <string name="saves_exportados_or_saves">-saves-exportados or -saves.</string>
@@ -291,7 +291,7 @@
     <string name="the_file_is_not_an_xbox">the file is not an Xbox 360 disc image</string>
     <string name="the_final_image_and_what_shows">The final image and what shows over it.</string>
     <string name="the_folder_has_no_save">"the folder has no save: "</string>
-    <string name="the_folder_must_have_default_xex">The folder must have default.xex, XMediaFacade_default.xex, SpeechFacade_default.xex and media.</string>
+    <string name="the_folder_must_have_default_xex">The folder must have default.xex.</string>
     <string name="the_game_can_use_this_driver">The game can use this driver.</string>
     <string name="the_game_draws_the_scene_in" formatted="false">Draws the scene in one go instead of in parts: less work for the processor (+25 %). Only works with anti-aliasing off or on FXAA.</string>
     <string name="the_game_files_and_your_progress">The game files and your progress.</string>
@@ -324,7 +324,7 @@
     <string name="two_arrows_on_the_left_instead">Two arrows on the left of the screen, instead of the stick, as in other racing games. Holding one turns the wheel little by little.</string>
     <string name="how_far_the_arrows_turn_the_wheel">How far the arrows turn the wheel at most.</string>
     <string name="touch_controls">Touch controls</string>
-    <string name="to_jogos">To jogos/</string>
+    <string name="to_jogos">To Internal storage/</string>
     <string name="to_use_internal_storage_allow_the">To find the game, the app needs access to your files: tap Use the game ISO or Choose the game folder below, and Android will ask for it.</string>
     <string name="turned_off_it_breaks_the_game">Turned off, it breaks the game: only the bottom band of the screen shows, with black and grey bands above.</string>
     <string name="turnip_and_qualcomm_drivers_are_for">Turnip and Qualcomm drivers are for Adreno GPUs only: with this GPU, use the system driver.</string>

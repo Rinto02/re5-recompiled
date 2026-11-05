@@ -138,7 +138,7 @@ std::string JoinCores(const std::vector<int>& cores) {
 }
 
 // The native ring thread's tid (app/src/nativo/nfsmw_nativo_sistema.cpp); 0 before it starts.
-extern std::atomic<int> g_re5_nativo_anillo_tid;
+std::atomic<int> g_re5_nativo_anillo_tid{0};
 
 // Whether a thread named like the native ring ("GPU anillo...") is the ring itself. The threads the ring creates
 // inherit its name (Linux copies the creator's comm): on the Moto G9 Play with Turnip three threads were called
@@ -219,8 +219,8 @@ std::atomic<float>* PluginCounter(const char* name, std::atomic<float>*& cache) 
 
 // The native renderer (nfsmw_renderizador = nativo) does not load the GPU plugin: it counts its own Swaps
 // (app/src/nativo/nfsmw_nativo_destinos.cpp).
-extern std::atomic<float> g_re5_nativo_fps;
-extern std::atomic<float> g_re5_nativo_ms;
+std::atomic<float> g_re5_nativo_fps{-1.0f};
+std::atomic<float> g_re5_nativo_ms{-1.0f};
 
 extern "C" JNIEXPORT jfloat JNICALL Java_com_re5recomp_android_GameActivity_nativeFps(JNIEnv*, jclass) {
   if (const float nativo = g_re5_nativo_fps.load(std::memory_order_relaxed); nativo >= 0.0f) {
@@ -253,7 +253,7 @@ extern "C" JNIEXPORT jlong JNICALL Java_com_re5recomp_android_GameActivity_nativ
 
 // GPU nanoseconds of the native renderer's measured submissions, accumulated (re5_nativo_medir_gpu_uso or
 // re5_nativo_medir_gpu); -1 without timestamps. UsageMonitor turns it into "GPU %" where no kernel file is readable.
-extern std::atomic<int64_t> g_re5_nativo_gpu_ns;
+std::atomic<int64_t> g_re5_nativo_gpu_ns{-1};
 
 extern "C" JNIEXPORT jlong JNICALL Java_com_re5recomp_android_UsageMonitor_nativeGpuNs(JNIEnv*, jclass) {
   return g_re5_nativo_gpu_ns.load(std::memory_order_relaxed);

@@ -73,7 +73,7 @@ public final class MainActivity extends AppCompatActivity {
     private static final int REQUEST_ISO = 47;
     private static final String TREE_URI = "tree_uri";
     // Relative to the internal storage root (the "jogos" folder holds the user's games).
-    static final String GAME_FOLDER_NAME = "jogos/RE5";
+    static final String GAME_FOLDER_NAME = "RE5";
     static final String PROJECT_URL = "https://github.com/Gabrick75/re5-recompiled";
 
     private TextView importStatus;
@@ -2038,17 +2038,12 @@ ui.footer(tr(R.string.a_disc_image_the_xbox_360, GAME_FOLDER_NAME)),
     }
 
     private static boolean isValidGameFolder(File folder) {
-        return new File(folder, "default.xex").isFile() && new File(folder, "media").isDirectory() &&
-                new File(folder, "XMediaFacade_default.xex").isFile() &&
-                new File(folder, "SpeechFacade_default.xex").isFile();
+        return new File(folder, "default.xex").isFile();
     }
 
     private void showChecks(File folder) {
         checksList.removeAllViews();
         addCheck("default.xex", new File(folder, "default.xex").isFile());
-        addCheck("XMediaFacade_default.xex", new File(folder, "XMediaFacade_default.xex").isFile());
-        addCheck("SpeechFacade_default.xex", new File(folder, "SpeechFacade_default.xex").isFile());
-        addCheck(tr(R.string.media_folder), new File(folder, "media").isDirectory());
     }
 
     private void addCheck(String name, boolean ok) {

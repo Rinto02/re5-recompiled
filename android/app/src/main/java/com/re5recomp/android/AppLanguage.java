@@ -15,8 +15,8 @@ import java.util.Locale;
  * its context in attachBaseContext. The game's own language is a separate option (GameOptions.GAME_LANGUAGE).
  */
 final class AppLanguage {
-    static final String[] CODES = {"", "pt", "en", "es"};        // "": the system's
-    static final String[] NAMES = {null, "Português", "English", "Español"};  // each in its own language
+    static final String[] CODES = {"", "en"};        // "": the system's
+    static final String[] NAMES = {null, "English"};  // each in its own language
 
     private static volatile Resources resources = Resources.getSystem();
 

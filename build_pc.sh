@@ -75,8 +75,8 @@ REXGLUE="$REXGLUE" PYTHON="$PYBIN" "$RAIZ/tools/codegen.sh" app || exit 1
   echo "ERRO: codegen não gerou app/generated/rexglue.cmake; veja app/codegen.log." >&2
   exit 1
 }
-[ -f "$RAIZ/app/generated/default/sources.cmake" ] || {
-  echo "ERRO: codegen não gerou app/generated/default/sources.cmake; veja app/codegen.log." >&2
+[ -f "$RAIZ/app/generated/sources.cmake" ] || {
+  echo "ERRO: codegen não gerou app/generated/sources.cmake; veja app/codegen.log." >&2
   exit 1
 }
 

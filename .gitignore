@@ -52,3 +52,4 @@ app/assets/
 app/generated/
 app/codegen.log
 app/out/
+app/achievements/

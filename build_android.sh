@@ -9,7 +9,7 @@ if [ -z "${ANDROID_HOME:-}" ] && [ -d "$HOME/Android/Sdk" ]; then
     ANDROID_HOME="$HOME/Android/Sdk"
     export ANDROID_HOME ANDROID_SDK_ROOT="$ANDROID_HOME"
 fi
-[ -f "$repo_root/app/generated/default/sources.cmake" ] || { echo 'Run the codegen first (app/generated).' >&2; exit 1; }
+[ -f "$repo_root/app/generated/sources.cmake" ] || { echo 'Run the codegen first (app/generated).' >&2; exit 1; }
 cd "$repo_root/android"
 ./gradlew assembleRelease
 printf 'APK: %s\n' "$repo_root/android/app/build/outputs/apk/release/app-release.apk"

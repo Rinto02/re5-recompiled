@@ -460,7 +460,7 @@ final class Diagnostics {
     // Internal storage/jogos/re5-logs, where GameActivity writes one game log per session (re5_<date>_<time>.log,
     // next to its _uso.log). Newest first.
     static File sessionLogFolder() {
-        return new File(android.os.Environment.getExternalStorageDirectory(), "jogos/re5-logs");
+        return new File(android.os.Environment.getExternalStorageDirectory(), "RE5-logs");
     }
 
     static File[] newestSessions(int count) {

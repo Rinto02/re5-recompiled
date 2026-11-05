@@ -24,7 +24,7 @@ import static com.re5recomp.android.AppLanguage.tr;
 final class GameIso {
     // Where the game partition starts on the disc kinds DiscImageDevice knows (XGD1, XGD2, XGD3, a plain xiso), and
     // the GDFX volume descriptor 32 sectors in.
-    private static final long[] PARTITIONS = {0x0L, 0xFDA0000L, 0x2080000L, 0x18300000L};
+    private static final long[] PARTITIONS = {0x0L, 0xFD90000L, 0xFDA0000L, 0x2080000L, 0x2090000L, 0x18300000L};
     private static final long DESCRIPTOR = 32 * 2048;
     private static final byte[] MAGIC = "MICROSOFT*XBOX*MEDIA".getBytes(StandardCharsets.US_ASCII);
 

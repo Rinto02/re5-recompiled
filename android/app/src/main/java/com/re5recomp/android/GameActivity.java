@@ -558,7 +558,7 @@ public final class GameActivity extends SDLActivity
     // adb (the SDK's own log file is in the app's private folder). Keeps the newest 40 files.
     private String sessionLogBase() {
         if (sessionLogBase == null) {
-            File dir = new File(Environment.getExternalStorageDirectory(), "jogos/re5-logs");
+            File dir = new File(Environment.getExternalStorageDirectory(), "RE5-logs");
             dir.mkdirs();
             File[] old = dir.listFiles();
             if (old != null && old.length > 40) {
@@ -648,7 +648,6 @@ public final class GameActivity extends SDLActivity
         List<String> args = new ArrayList<>();
         args.add("--game_data_root=" + gameRoot);
         // From an ISO, the native renderer also looks for re5_shaders.nfsp in the game folder.
-        args.add("--re5_nativo_biblioteca_dir=" + MainActivity.gameRoot().getAbsolutePath());
         args.add("--user_data_root=" + userRoot);
         args.add("--cache_root=" + cacheRoot);
         // The launcher's options win over re5.toml.
