@@ -35,6 +35,17 @@ namespace {
 // GapFill to register uncovered code regions
 //=============================================================================
 
+// bctr preceded by "lwz rX,N(rY); mtctr rX" is a vtable tail call (a switch jump table uses lwzx).
+bool isVtableTailCall(const BinaryView& binary, uint32_t addr) {
+  const uint8_t* p1 = binary.translate(addr - 4);
+  const uint8_t* p2 = binary.translate(addr - 8);
+  if (!p1 || !p2)
+    return false;
+  auto i1 = decode_instruction(addr - 4, load_and_swap<uint32_t>(p1));
+  auto i2 = decode_instruction(addr - 8, load_and_swap<uint32_t>(p2));
+  return i1.opcode == Opcode::mtctr && i2.opcode == Opcode::lwz;
+}
+
 // Split a code region into function segments based on terminators (blr, tail calls).
 std::vector<CodeRegion> splitRegionOnTerminators(
     const CodeRegion& region, const BinaryView& binary,
@@ -56,6 +67,11 @@ std::vector<CodeRegion> splitRegionOnTerminators(
     if (decoded.is_return()) {
       shouldSplit = true;
       reason = "blr";
+    } else if (decoded.opcode == Opcode::bcctr && decoded.code == 0x4E800420 &&
+               addr >= region.start + 8 && isVtableTailCall(binary, addr)) {
+      // bctr: unconditional indirect branch (vtable tail call), never falls through
+      shouldSplit = true;
+      reason = "bctr";
     } else if (decoded.opcode == Opcode::b && decoded.branch_target.has_value()) {
       uint32_t target = decoded.branch_target.value();
       // Don't split on tail recursion (branch to own segment start)
@@ -119,6 +135,86 @@ bool looksLikeExceptionData(const BinaryView& binary, const FunctionGraph& graph
   return false;
 }
 
+// Register code that is not part of any known function and directly follows a known function's
+// final unconditional branch (e.g. vtable-only thunks that GapFill's segment walk skips).
+void fillHolesAfterKnownFunctions(CodegenContext& ctx) {
+  auto& graph = ctx.graph;
+  auto& binary = ctx.binary();
+  auto& scan = ctx.scan;
+
+  std::unordered_set<uint32_t> knownCallables;
+  for (const auto& [addr, node] : graph.functions()) {
+    knownCallables.insert(addr);
+  }
+
+  // Covered = inside a known function's discovered blocks. A function's declared size can extend
+  // past its reachable code (e.g. a vtable-only thunk packed right after it).
+  auto covered = [&](uint32_t a) {
+    if (graph.isEntryPoint(a))
+      return true;
+    const auto* n = graph.getFunctionContaining(a);
+    if (!n)
+      return false;
+    if (n->blocks().empty())
+      return true;
+    return n->containsAddress(a);
+  };
+
+  size_t filled = 0;
+  for (const auto& region : scan.codeRegions) {
+    uint32_t addr = region.start;
+    while (addr < region.end) {
+      if (covered(addr)) {
+        addr += 4;
+        continue;
+      }
+      uint32_t runStart = addr;
+      while (addr < region.end && !covered(addr)) {
+        addr += 4;
+      }
+      uint32_t runEnd = addr;
+      if (runStart == region.start)
+        continue;
+
+      const uint8_t* pd = binary.translate(runStart - 4);
+      if (!pd)
+        continue;
+      auto prev = decode_instruction(runStart - 4, load_and_swap<uint32_t>(pd));
+      bool terminated = prev.is_return() || prev.opcode == Opcode::b ||
+                        (prev.opcode == Opcode::bcctr && prev.code == 0x4E800420 &&
+                         isVtableTailCall(binary, runStart - 4));
+      if (!terminated)
+        continue;
+
+      uint32_t start = runStart;
+      while (start < runEnd) {
+        const uint8_t* d = binary.translate(start);
+        if (!d || load_and_swap<uint32_t>(d) != 0x60000000)
+          break;
+        start += 4;
+      }
+      if (start >= runEnd)
+        continue;
+
+      auto segments = splitRegionOnTerminators({start, runEnd}, binary, knownCallables);
+      for (const auto& segment : segments) {
+        if (covered(segment.start))
+          continue;
+        if (looksLikeExceptionData(binary, graph, segment.start))
+          continue;
+        graph.addFunction(segment.start, segment.size(), FunctionAuthority::GAP_FILL, false);
+        knownCallables.insert(segment.start);
+        filled++;
+        REXCODEGEN_WARN("GapFill hole: sub_{:08X} {} bytes", segment.start, segment.size());
+      }
+    }
+  }
+
+  if (filled > 0) {
+    REXCODEGEN_WARN("GapFill: registered {} functions in holes after known functions", filled);
+  }
+}
+
 void gapFillCodeRegions(CodegenContext& ctx) {
   REXCODEGEN_TRACE("Analyze: checking for uncovered code regions...");
 
@@ -170,6 +266,8 @@ void gapFillCodeRegions(CodegenContext& ctx) {
   } else {
     REXCODEGEN_TRACE("Analyze: no uncovered regions found");
   }
+
+  fillHolesAfterKnownFunctions(ctx);
 }
 
 //=============================================================================

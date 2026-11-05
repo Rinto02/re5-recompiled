@@ -36,6 +36,7 @@ exception_handler_funcs = []
 0x82907180 = { name = "re5_fn_82907180" }
 0x82AA4340 = { name = "re5_fn_82AA4340" }
 0x82A98B98 = { name = "re5_fn_82A98B98", size = 0x2C }
+0x8294C5B0 = { name = "re5_fn_8294C5B0", size = 0x24 }
 0x82A98BC4 = { name = "re5_fn_82A98BC4" }
 0x82C99C34 = { name = "re5_fn_82C99C34" }
 0x82C99C64 = { name = "re5_fn_82C99C64" }
