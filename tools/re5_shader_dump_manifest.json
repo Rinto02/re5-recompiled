@@ -1,0 +1,2434 @@
+{
+  "archive": "re5_shader_ucode.zip",
+  "shader_count": 173,
+  "stage_counts": {
+    "vert": 91,
+    "frag": 82
+  },
+  "binary_bytes": 154728,
+  "disassembly_bytes": 964310,
+  "shaders": [
+    {
+      "hash": "013FC8663CE9BC62",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_013FC8663CE9BC62.ucode.bin.vert",
+        "bytes": 912
+      },
+      "dwords": 228,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_013FC8663CE9BC62.ucode.vert",
+        "bytes": 4385
+      },
+      "disassembly_lines": 92
+    },
+    {
+      "hash": "029D6BA337B6C217",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_029D6BA337B6C217.ucode.bin.vert",
+        "bytes": 120
+      },
+      "dwords": 30,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_029D6BA337B6C217.ucode.vert",
+        "bytes": 616
+      },
+      "disassembly_lines": 12
+    },
+    {
+      "hash": "07D596F3737E841C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_07D596F3737E841C.ucode.bin.vert",
+        "bytes": 768
+      },
+      "dwords": 192,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_07D596F3737E841C.ucode.vert",
+        "bytes": 3715
+      },
+      "disassembly_lines": 77
+    },
+    {
+      "hash": "07E45EAA76A672FE",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_07E45EAA76A672FE.ucode.bin.frag",
+        "bytes": 348
+      },
+      "dwords": 87,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_07E45EAA76A672FE.ucode.frag",
+        "bytes": 2061
+      },
+      "disassembly_lines": 43
+    },
+    {
+      "hash": "08292B858C1B7A99",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_08292B858C1B7A99.ucode.bin.vert",
+        "bytes": 492
+      },
+      "dwords": 123,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_08292B858C1B7A99.ucode.vert",
+        "bytes": 2370
+      },
+      "disassembly_lines": 51
+    },
+    {
+      "hash": "095A06FD2C54289D",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_095A06FD2C54289D.ucode.bin.vert",
+        "bytes": 540
+      },
+      "dwords": 135,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_095A06FD2C54289D.ucode.vert",
+        "bytes": 2880
+      },
+      "disassembly_lines": 58
+    },
+    {
+      "hash": "0B8C16E565FE20BD",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_0B8C16E565FE20BD.ucode.bin.frag",
+        "bytes": 132
+      },
+      "dwords": 33,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_0B8C16E565FE20BD.ucode.frag",
+        "bytes": 662
+      },
+      "disassembly_lines": 14
+    },
+    {
+      "hash": "0E7579C05892461F",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_0E7579C05892461F.ucode.bin.frag",
+        "bytes": 204
+      },
+      "dwords": 51,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_0E7579C05892461F.ucode.frag",
+        "bytes": 944
+      },
+      "disassembly_lines": 20
+    },
+    {
+      "hash": "0E85290CF7224EEE",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_0E85290CF7224EEE.ucode.bin.vert",
+        "bytes": 792
+      },
+      "dwords": 198,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_0E85290CF7224EEE.ucode.vert",
+        "bytes": 4144
+      },
+      "disassembly_lines": 83
+    },
+    {
+      "hash": "0F20D907C25F27C7",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_0F20D907C25F27C7.ucode.bin.frag",
+        "bytes": 36
+      },
+      "dwords": 9,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_0F20D907C25F27C7.ucode.frag",
+        "bytes": 149
+      },
+      "disassembly_lines": 4
+    },
+    {
+      "hash": "10F6D04971BF6488",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_10F6D04971BF6488.ucode.bin.frag",
+        "bytes": 1932
+      },
+      "dwords": 483,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_10F6D04971BF6488.ucode.frag",
+        "bytes": 9926
+      },
+      "disassembly_lines": 200
+    },
+    {
+      "hash": "11F385A94251D07D",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_11F385A94251D07D.ucode.bin.vert",
+        "bytes": 504
+      },
+      "dwords": 126,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_11F385A94251D07D.ucode.vert",
+        "bytes": 2723
+      },
+      "disassembly_lines": 54
+    },
+    {
+      "hash": "11F9DAEC1C2F6178",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_11F9DAEC1C2F6178.ucode.bin.vert",
+        "bytes": 660
+      },
+      "dwords": 165,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_11F9DAEC1C2F6178.ucode.vert",
+        "bytes": 3229
+      },
+      "disassembly_lines": 68
+    },
+    {
+      "hash": "121B321829420287",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_121B321829420287.ucode.bin.frag",
+        "bytes": 3024
+      },
+      "dwords": 756,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_121B321829420287.ucode.frag",
+        "bytes": 22555
+      },
+      "disassembly_lines": 499
+    },
+    {
+      "hash": "1384263F88053A40",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_1384263F88053A40.ucode.bin.vert",
+        "bytes": 564
+      },
+      "dwords": 141,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_1384263F88053A40.ucode.vert",
+        "bytes": 3150
+      },
+      "disassembly_lines": 66
+    },
+    {
+      "hash": "154C218A723B6AF8",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_154C218A723B6AF8.ucode.bin.frag",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_154C218A723B6AF8.ucode.frag",
+        "bytes": 457
+      },
+      "disassembly_lines": 11
+    },
+    {
+      "hash": "16B2630B03F3E44C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_16B2630B03F3E44C.ucode.bin.vert",
+        "bytes": 384
+      },
+      "dwords": 96,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_16B2630B03F3E44C.ucode.vert",
+        "bytes": 2056
+      },
+      "disassembly_lines": 42
+    },
+    {
+      "hash": "16F0A8B30F491715",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_16F0A8B30F491715.ucode.bin.frag",
+        "bytes": 108
+      },
+      "dwords": 27,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_16F0A8B30F491715.ucode.frag",
+        "bytes": 412
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "182588D11C50805E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_182588D11C50805E.ucode.bin.frag",
+        "bytes": 108
+      },
+      "dwords": 27,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_182588D11C50805E.ucode.frag",
+        "bytes": 429
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "1863B60265991AFE",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_1863B60265991AFE.ucode.bin.frag",
+        "bytes": 168
+      },
+      "dwords": 42,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_1863B60265991AFE.ucode.frag",
+        "bytes": 658
+      },
+      "disassembly_lines": 15
+    },
+    {
+      "hash": "1A40CC15225E501A",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_1A40CC15225E501A.ucode.bin.vert",
+        "bytes": 804
+      },
+      "dwords": 201,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_1A40CC15225E501A.ucode.vert",
+        "bytes": 3898
+      },
+      "disassembly_lines": 81
+    },
+    {
+      "hash": "1DC8EE7B61618B68",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_1DC8EE7B61618B68.ucode.bin.vert",
+        "bytes": 636
+      },
+      "dwords": 159,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_1DC8EE7B61618B68.ucode.vert",
+        "bytes": 3065
+      },
+      "disassembly_lines": 66
+    },
+    {
+      "hash": "1E6883FCCDE1F688",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_1E6883FCCDE1F688.ucode.bin.vert",
+        "bytes": 108
+      },
+      "dwords": 27,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_1E6883FCCDE1F688.ucode.vert",
+        "bytes": 529
+      },
+      "disassembly_lines": 11
+    },
+    {
+      "hash": "1FA024FAE1F9AF9B",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_1FA024FAE1F9AF9B.ucode.bin.vert",
+        "bytes": 1032
+      },
+      "dwords": 258,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_1FA024FAE1F9AF9B.ucode.vert",
+        "bytes": 5097
+      },
+      "disassembly_lines": 105
+    },
+    {
+      "hash": "20E3A4BF49C2FD87",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_20E3A4BF49C2FD87.ucode.bin.frag",
+        "bytes": 2244
+      },
+      "dwords": 561,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_20E3A4BF49C2FD87.ucode.frag",
+        "bytes": 16793
+      },
+      "disassembly_lines": 373
+    },
+    {
+      "hash": "21639EF6002AD256",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_21639EF6002AD256.ucode.bin.vert",
+        "bytes": 2160
+      },
+      "dwords": 540,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_21639EF6002AD256.ucode.vert",
+        "bytes": 11756
+      },
+      "disassembly_lines": 230
+    },
+    {
+      "hash": "21E53E8AF55EB37F",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_21E53E8AF55EB37F.ucode.bin.vert",
+        "bytes": 612
+      },
+      "dwords": 153,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_21E53E8AF55EB37F.ucode.vert",
+        "bytes": 2991
+      },
+      "disassembly_lines": 63
+    },
+    {
+      "hash": "229971921BE8E477",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_229971921BE8E477.ucode.bin.vert",
+        "bytes": 864
+      },
+      "dwords": 216,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_229971921BE8E477.ucode.vert",
+        "bytes": 4276
+      },
+      "disassembly_lines": 89
+    },
+    {
+      "hash": "248DDB0AECD0F3AE",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_248DDB0AECD0F3AE.ucode.bin.vert",
+        "bytes": 552
+      },
+      "dwords": 138,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_248DDB0AECD0F3AE.ucode.vert",
+        "bytes": 2697
+      },
+      "disassembly_lines": 57
+    },
+    {
+      "hash": "258D77E1F9F55211",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_258D77E1F9F55211.ucode.bin.frag",
+        "bytes": 504
+      },
+      "dwords": 126,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_258D77E1F9F55211.ucode.frag",
+        "bytes": 2461
+      },
+      "disassembly_lines": 53
+    },
+    {
+      "hash": "288C06E87A5A7917",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_288C06E87A5A7917.ucode.bin.vert",
+        "bytes": 876
+      },
+      "dwords": 219,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_288C06E87A5A7917.ucode.vert",
+        "bytes": 4306
+      },
+      "disassembly_lines": 91
+    },
+    {
+      "hash": "28F9D311ED845C2E",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_28F9D311ED845C2E.ucode.bin.vert",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_28F9D311ED845C2E.ucode.vert",
+        "bytes": 516
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "2ABFBAD4BC7FF920",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_2ABFBAD4BC7FF920.ucode.bin.vert",
+        "bytes": 228
+      },
+      "dwords": 57,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_2ABFBAD4BC7FF920.ucode.vert",
+        "bytes": 1248
+      },
+      "disassembly_lines": 23
+    },
+    {
+      "hash": "2AF58F4975D3D11D",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_2AF58F4975D3D11D.ucode.bin.vert",
+        "bytes": 1116
+      },
+      "dwords": 279,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_2AF58F4975D3D11D.ucode.vert",
+        "bytes": 6237
+      },
+      "disassembly_lines": 134
+    },
+    {
+      "hash": "2C9FDDCC16451140",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_2C9FDDCC16451140.ucode.bin.frag",
+        "bytes": 300
+      },
+      "dwords": 75,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_2C9FDDCC16451140.ucode.frag",
+        "bytes": 1670
+      },
+      "disassembly_lines": 37
+    },
+    {
+      "hash": "2D66E2C4802881BB",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_2D66E2C4802881BB.ucode.bin.frag",
+        "bytes": 2160
+      },
+      "dwords": 540,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_2D66E2C4802881BB.ucode.frag",
+        "bytes": 16005
+      },
+      "disassembly_lines": 358
+    },
+    {
+      "hash": "2DD725A8B7262FA1",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_2DD725A8B7262FA1.ucode.bin.vert",
+        "bytes": 456
+      },
+      "dwords": 114,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_2DD725A8B7262FA1.ucode.vert",
+        "bytes": 2158
+      },
+      "disassembly_lines": 47
+    },
+    {
+      "hash": "2DEC71D6C7E6169E",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_2DEC71D6C7E6169E.ucode.bin.vert",
+        "bytes": 1128
+      },
+      "dwords": 282,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_2DEC71D6C7E6169E.ucode.vert",
+        "bytes": 6690
+      },
+      "disassembly_lines": 139
+    },
+    {
+      "hash": "3100E450554AC4E8",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3100E450554AC4E8.ucode.bin.vert",
+        "bytes": 564
+      },
+      "dwords": 141,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3100E450554AC4E8.ucode.vert",
+        "bytes": 2734
+      },
+      "disassembly_lines": 58
+    },
+    {
+      "hash": "314F1899E2F5CDEB",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_314F1899E2F5CDEB.ucode.bin.frag",
+        "bytes": 540
+      },
+      "dwords": 135,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_314F1899E2F5CDEB.ucode.frag",
+        "bytes": 3574
+      },
+      "disassembly_lines": 77
+    },
+    {
+      "hash": "33AAE4AA8FE5A121",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_33AAE4AA8FE5A121.ucode.bin.vert",
+        "bytes": 804
+      },
+      "dwords": 201,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_33AAE4AA8FE5A121.ucode.vert",
+        "bytes": 4523
+      },
+      "disassembly_lines": 93
+    },
+    {
+      "hash": "374D0255268FD07E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_374D0255268FD07E.ucode.bin.frag",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_374D0255268FD07E.ucode.frag",
+        "bytes": 363
+      },
+      "disassembly_lines": 9
+    },
+    {
+      "hash": "39229647178FDD2C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_39229647178FDD2C.ucode.bin.vert",
+        "bytes": 1044
+      },
+      "dwords": 261,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_39229647178FDD2C.ucode.vert",
+        "bytes": 5118
+      },
+      "disassembly_lines": 103
+    },
+    {
+      "hash": "392BC08FE63DA719",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_392BC08FE63DA719.ucode.bin.vert",
+        "bytes": 840
+      },
+      "dwords": 210,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_392BC08FE63DA719.ucode.vert",
+        "bytes": 4117
+      },
+      "disassembly_lines": 86
+    },
+    {
+      "hash": "3B35C78BE178B3D2",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3B35C78BE178B3D2.ucode.bin.frag",
+        "bytes": 924
+      },
+      "dwords": 231,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3B35C78BE178B3D2.ucode.frag",
+        "bytes": 5358
+      },
+      "disassembly_lines": 114
+    },
+    {
+      "hash": "3B95B7EF31D41D1C",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3B95B7EF31D41D1C.ucode.bin.frag",
+        "bytes": 2736
+      },
+      "dwords": 684,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3B95B7EF31D41D1C.ucode.frag",
+        "bytes": 20452
+      },
+      "disassembly_lines": 452
+    },
+    {
+      "hash": "3BF201DA2BF5AB8C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3BF201DA2BF5AB8C.ucode.bin.vert",
+        "bytes": 540
+      },
+      "dwords": 135,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3BF201DA2BF5AB8C.ucode.vert",
+        "bytes": 2708
+      },
+      "disassembly_lines": 57
+    },
+    {
+      "hash": "3C036320FB28974E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3C036320FB28974E.ucode.bin.frag",
+        "bytes": 504
+      },
+      "dwords": 126,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3C036320FB28974E.ucode.frag",
+        "bytes": 2582
+      },
+      "disassembly_lines": 55
+    },
+    {
+      "hash": "3CDE00396479C3CD",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3CDE00396479C3CD.ucode.bin.frag",
+        "bytes": 2328
+      },
+      "dwords": 582,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3CDE00396479C3CD.ucode.frag",
+        "bytes": 17207
+      },
+      "disassembly_lines": 386
+    },
+    {
+      "hash": "3D106C9878D70807",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3D106C9878D70807.ucode.bin.frag",
+        "bytes": 312
+      },
+      "dwords": 78,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3D106C9878D70807.ucode.frag",
+        "bytes": 1744
+      },
+      "disassembly_lines": 37
+    },
+    {
+      "hash": "3D5CA3A76977666C",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3D5CA3A76977666C.ucode.bin.frag",
+        "bytes": 2292
+      },
+      "dwords": 573,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3D5CA3A76977666C.ucode.frag",
+        "bytes": 16969
+      },
+      "disassembly_lines": 380
+    },
+    {
+      "hash": "3E5EBC757803E63E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_3E5EBC757803E63E.ucode.bin.frag",
+        "bytes": 1908
+      },
+      "dwords": 477,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_3E5EBC757803E63E.ucode.frag",
+        "bytes": 10669
+      },
+      "disassembly_lines": 222
+    },
+    {
+      "hash": "412AE5E1D3A45F34",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_412AE5E1D3A45F34.ucode.bin.frag",
+        "bytes": 120
+      },
+      "dwords": 30,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_412AE5E1D3A45F34.ucode.frag",
+        "bytes": 534
+      },
+      "disassembly_lines": 12
+    },
+    {
+      "hash": "41467230B7C03A12",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_41467230B7C03A12.ucode.bin.frag",
+        "bytes": 72
+      },
+      "dwords": 18,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_41467230B7C03A12.ucode.frag",
+        "bytes": 343
+      },
+      "disassembly_lines": 9
+    },
+    {
+      "hash": "417506F631F3FBCD",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_417506F631F3FBCD.ucode.bin.vert",
+        "bytes": 576
+      },
+      "dwords": 144,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_417506F631F3FBCD.ucode.vert",
+        "bytes": 2826
+      },
+      "disassembly_lines": 59
+    },
+    {
+      "hash": "4180C7C2D8D87771",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_4180C7C2D8D87771.ucode.bin.frag",
+        "bytes": 36
+      },
+      "dwords": 9,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_4180C7C2D8D87771.ucode.frag",
+        "bytes": 154
+      },
+      "disassembly_lines": 4
+    },
+    {
+      "hash": "43772E29695DDF9C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_43772E29695DDF9C.ucode.bin.vert",
+        "bytes": 756
+      },
+      "dwords": 189,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_43772E29695DDF9C.ucode.vert",
+        "bytes": 3820
+      },
+      "disassembly_lines": 80
+    },
+    {
+      "hash": "49429D3C7D8D7EA9",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_49429D3C7D8D7EA9.ucode.bin.vert",
+        "bytes": 672
+      },
+      "dwords": 168,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_49429D3C7D8D7EA9.ucode.vert",
+        "bytes": 3283
+      },
+      "disassembly_lines": 69
+    },
+    {
+      "hash": "4AC81DF99E92342B",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_4AC81DF99E92342B.ucode.bin.frag",
+        "bytes": 204
+      },
+      "dwords": 51,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_4AC81DF99E92342B.ucode.frag",
+        "bytes": 944
+      },
+      "disassembly_lines": 20
+    },
+    {
+      "hash": "4C0FE9DAA442ED47",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_4C0FE9DAA442ED47.ucode.bin.vert",
+        "bytes": 576
+      },
+      "dwords": 144,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_4C0FE9DAA442ED47.ucode.vert",
+        "bytes": 2851
+      },
+      "disassembly_lines": 59
+    },
+    {
+      "hash": "4E6650141D93942B",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_4E6650141D93942B.ucode.bin.frag",
+        "bytes": 72
+      },
+      "dwords": 18,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_4E6650141D93942B.ucode.frag",
+        "bytes": 261
+      },
+      "disassembly_lines": 7
+    },
+    {
+      "hash": "4E77D585F57C3628",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_4E77D585F57C3628.ucode.bin.frag",
+        "bytes": 2676
+      },
+      "dwords": 669,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_4E77D585F57C3628.ucode.frag",
+        "bytes": 20038
+      },
+      "disassembly_lines": 442
+    },
+    {
+      "hash": "5083810041E89712",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_5083810041E89712.ucode.bin.vert",
+        "bytes": 612
+      },
+      "dwords": 153,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_5083810041E89712.ucode.vert",
+        "bytes": 3019
+      },
+      "disassembly_lines": 62
+    },
+    {
+      "hash": "5298B35B6E45CAA4",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_5298B35B6E45CAA4.ucode.bin.frag",
+        "bytes": 2736
+      },
+      "dwords": 684,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_5298B35B6E45CAA4.ucode.frag",
+        "bytes": 20403
+      },
+      "disassembly_lines": 451
+    },
+    {
+      "hash": "54320ED7F5FAA7A2",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_54320ED7F5FAA7A2.ucode.bin.vert",
+        "bytes": 732
+      },
+      "dwords": 183,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_54320ED7F5FAA7A2.ucode.vert",
+        "bytes": 3819
+      },
+      "disassembly_lines": 76
+    },
+    {
+      "hash": "54ACF9FE7E4C7D40",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_54ACF9FE7E4C7D40.ucode.bin.vert",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_54ACF9FE7E4C7D40.ucode.vert",
+        "bytes": 518
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "5843CEED9812D51D",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_5843CEED9812D51D.ucode.bin.vert",
+        "bytes": 72
+      },
+      "dwords": 18,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_5843CEED9812D51D.ucode.vert",
+        "bytes": 335
+      },
+      "disassembly_lines": 8
+    },
+    {
+      "hash": "590B8195E511EA06",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_590B8195E511EA06.ucode.bin.frag",
+        "bytes": 2412
+      },
+      "dwords": 603,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_590B8195E511EA06.ucode.frag",
+        "bytes": 17987
+      },
+      "disassembly_lines": 400
+    },
+    {
+      "hash": "5C7618C9659C9328",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_5C7618C9659C9328.ucode.bin.vert",
+        "bytes": 1092
+      },
+      "dwords": 273,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_5C7618C9659C9328.ucode.vert",
+        "bytes": 6156
+      },
+      "disassembly_lines": 134
+    },
+    {
+      "hash": "5CA025FD8C0D0B79",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_5CA025FD8C0D0B79.ucode.bin.vert",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_5CA025FD8C0D0B79.ucode.vert",
+        "bytes": 516
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "62B3BAC4170278E2",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_62B3BAC4170278E2.ucode.bin.frag",
+        "bytes": 696
+      },
+      "dwords": 174,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_62B3BAC4170278E2.ucode.frag",
+        "bytes": 3540
+      },
+      "disassembly_lines": 71
+    },
+    {
+      "hash": "648CBD6EA2C6E1E9",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_648CBD6EA2C6E1E9.ucode.bin.frag",
+        "bytes": 120
+      },
+      "dwords": 30,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_648CBD6EA2C6E1E9.ucode.frag",
+        "bytes": 579
+      },
+      "disassembly_lines": 14
+    },
+    {
+      "hash": "653EBAE12CB04F0E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_653EBAE12CB04F0E.ucode.bin.frag",
+        "bytes": 132
+      },
+      "dwords": 33,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_653EBAE12CB04F0E.ucode.frag",
+        "bytes": 520
+      },
+      "disassembly_lines": 12
+    },
+    {
+      "hash": "688CFF75A2739322",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_688CFF75A2739322.ucode.bin.frag",
+        "bytes": 2904
+      },
+      "dwords": 726,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_688CFF75A2739322.ucode.frag",
+        "bytes": 21651
+      },
+      "disassembly_lines": 480
+    },
+    {
+      "hash": "68EEF809EE16DEB0",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_68EEF809EE16DEB0.ucode.bin.vert",
+        "bytes": 276
+      },
+      "dwords": 69,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_68EEF809EE16DEB0.ucode.vert",
+        "bytes": 1294
+      },
+      "disassembly_lines": 26
+    },
+    {
+      "hash": "69C8FE8D4F033AE4",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_69C8FE8D4F033AE4.ucode.bin.frag",
+        "bytes": 84
+      },
+      "dwords": 21,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_69C8FE8D4F033AE4.ucode.frag",
+        "bytes": 354
+      },
+      "disassembly_lines": 9
+    },
+    {
+      "hash": "6A1843511B82F9E5",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_6A1843511B82F9E5.ucode.bin.vert",
+        "bytes": 228
+      },
+      "dwords": 57,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_6A1843511B82F9E5.ucode.vert",
+        "bytes": 1197
+      },
+      "disassembly_lines": 22
+    },
+    {
+      "hash": "6A2DEE0B2DDA5A63",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_6A2DEE0B2DDA5A63.ucode.bin.frag",
+        "bytes": 2268
+      },
+      "dwords": 567,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_6A2DEE0B2DDA5A63.ucode.frag",
+        "bytes": 16965
+      },
+      "disassembly_lines": 377
+    },
+    {
+      "hash": "6E57A6E305D5D69B",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_6E57A6E305D5D69B.ucode.bin.frag",
+        "bytes": 60
+      },
+      "dwords": 15,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_6E57A6E305D5D69B.ucode.frag",
+        "bytes": 189
+      },
+      "disassembly_lines": 6
+    },
+    {
+      "hash": "6F9A4AED8998331E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_6F9A4AED8998331E.ucode.bin.frag",
+        "bytes": 60
+      },
+      "dwords": 15,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_6F9A4AED8998331E.ucode.frag",
+        "bytes": 190
+      },
+      "disassembly_lines": 6
+    },
+    {
+      "hash": "719F5C8E00824D03",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_719F5C8E00824D03.ucode.bin.vert",
+        "bytes": 984
+      },
+      "dwords": 246,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_719F5C8E00824D03.ucode.vert",
+        "bytes": 4780
+      },
+      "disassembly_lines": 100
+    },
+    {
+      "hash": "726D5C4DB8673E14",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_726D5C4DB8673E14.ucode.bin.vert",
+        "bytes": 864
+      },
+      "dwords": 216,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_726D5C4DB8673E14.ucode.vert",
+        "bytes": 4188
+      },
+      "disassembly_lines": 86
+    },
+    {
+      "hash": "74D19D19F5162C17",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_74D19D19F5162C17.ucode.bin.vert",
+        "bytes": 588
+      },
+      "dwords": 147,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_74D19D19F5162C17.ucode.vert",
+        "bytes": 2827
+      },
+      "disassembly_lines": 61
+    },
+    {
+      "hash": "750527D405423FE5",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_750527D405423FE5.ucode.bin.vert",
+        "bytes": 1092
+      },
+      "dwords": 273,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_750527D405423FE5.ucode.vert",
+        "bytes": 6116
+      },
+      "disassembly_lines": 133
+    },
+    {
+      "hash": "760E6265C2DE5708",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_760E6265C2DE5708.ucode.bin.frag",
+        "bytes": 2136
+      },
+      "dwords": 534,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_760E6265C2DE5708.ucode.frag",
+        "bytes": 15836
+      },
+      "disassembly_lines": 354
+    },
+    {
+      "hash": "7633CFB119B2A5D8",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_7633CFB119B2A5D8.ucode.bin.vert",
+        "bytes": 204
+      },
+      "dwords": 51,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_7633CFB119B2A5D8.ucode.vert",
+        "bytes": 1084
+      },
+      "disassembly_lines": 21
+    },
+    {
+      "hash": "76A0CD0F07341ADA",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_76A0CD0F07341ADA.ucode.bin.vert",
+        "bytes": 948
+      },
+      "dwords": 237,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_76A0CD0F07341ADA.ucode.vert",
+        "bytes": 4597
+      },
+      "disassembly_lines": 96
+    },
+    {
+      "hash": "76D2D3763C03470B",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_76D2D3763C03470B.ucode.bin.vert",
+        "bytes": 744
+      },
+      "dwords": 186,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_76D2D3763C03470B.ucode.vert",
+        "bytes": 3783
+      },
+      "disassembly_lines": 79
+    },
+    {
+      "hash": "79B188E7A8E19915",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_79B188E7A8E19915.ucode.bin.vert",
+        "bytes": 588
+      },
+      "dwords": 147,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_79B188E7A8E19915.ucode.vert",
+        "bytes": 2855
+      },
+      "disassembly_lines": 60
+    },
+    {
+      "hash": "7DA8976837E972D2",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_7DA8976837E972D2.ucode.bin.vert",
+        "bytes": 768
+      },
+      "dwords": 192,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_7DA8976837E972D2.ucode.vert",
+        "bytes": 3947
+      },
+      "disassembly_lines": 81
+    },
+    {
+      "hash": "7FBAFEB39EB561E9",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_7FBAFEB39EB561E9.ucode.bin.vert",
+        "bytes": 948
+      },
+      "dwords": 237,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_7FBAFEB39EB561E9.ucode.vert",
+        "bytes": 5339
+      },
+      "disassembly_lines": 114
+    },
+    {
+      "hash": "800626777E6E3B09",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_800626777E6E3B09.ucode.bin.frag",
+        "bytes": 144
+      },
+      "dwords": 36,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_800626777E6E3B09.ucode.frag",
+        "bytes": 673
+      },
+      "disassembly_lines": 16
+    },
+    {
+      "hash": "806C020451C97D9F",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_806C020451C97D9F.ucode.bin.vert",
+        "bytes": 108
+      },
+      "dwords": 27,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_806C020451C97D9F.ucode.vert",
+        "bytes": 568
+      },
+      "disassembly_lines": 11
+    },
+    {
+      "hash": "80B8B2A8C286D011",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_80B8B2A8C286D011.ucode.bin.frag",
+        "bytes": 144
+      },
+      "dwords": 36,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_80B8B2A8C286D011.ucode.frag",
+        "bytes": 794
+      },
+      "disassembly_lines": 18
+    },
+    {
+      "hash": "821DFE9C1FB35027",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_821DFE9C1FB35027.ucode.bin.frag",
+        "bytes": 2124
+      },
+      "dwords": 531,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_821DFE9C1FB35027.ucode.frag",
+        "bytes": 15769
+      },
+      "disassembly_lines": 353
+    },
+    {
+      "hash": "82860F8F59A53DA2",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_82860F8F59A53DA2.ucode.bin.vert",
+        "bytes": 684
+      },
+      "dwords": 171,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_82860F8F59A53DA2.ucode.vert",
+        "bytes": 3370
+      },
+      "disassembly_lines": 71
+    },
+    {
+      "hash": "860C5B6129663F2D",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_860C5B6129663F2D.ucode.bin.vert",
+        "bytes": 1152
+      },
+      "dwords": 288,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_860C5B6129663F2D.ucode.vert",
+        "bytes": 5581
+      },
+      "disassembly_lines": 114
+    },
+    {
+      "hash": "873DC388A549B662",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_873DC388A549B662.ucode.bin.vert",
+        "bytes": 1596
+      },
+      "dwords": 399,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_873DC388A549B662.ucode.vert",
+        "bytes": 9017
+      },
+      "disassembly_lines": 181
+    },
+    {
+      "hash": "881A5602FACF72C1",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_881A5602FACF72C1.ucode.bin.vert",
+        "bytes": 816
+      },
+      "dwords": 204,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_881A5602FACF72C1.ucode.vert",
+        "bytes": 4043
+      },
+      "disassembly_lines": 83
+    },
+    {
+      "hash": "88B6E7ACB82B57C4",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_88B6E7ACB82B57C4.ucode.bin.vert",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_88B6E7ACB82B57C4.ucode.vert",
+        "bytes": 516
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "88D771AA6BA7D2C6",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_88D771AA6BA7D2C6.ucode.bin.frag",
+        "bytes": 804
+      },
+      "dwords": 201,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_88D771AA6BA7D2C6.ucode.frag",
+        "bytes": 4109
+      },
+      "disassembly_lines": 84
+    },
+    {
+      "hash": "88F391E6EE0A3F38",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_88F391E6EE0A3F38.ucode.bin.frag",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_88F391E6EE0A3F38.ucode.frag",
+        "bytes": 411
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "8BC398CBCE0E4DBD",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_8BC398CBCE0E4DBD.ucode.bin.frag",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_8BC398CBCE0E4DBD.ucode.frag",
+        "bytes": 457
+      },
+      "disassembly_lines": 11
+    },
+    {
+      "hash": "8CD80B1459455F66",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_8CD80B1459455F66.ucode.bin.frag",
+        "bytes": 2868
+      },
+      "dwords": 717,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_8CD80B1459455F66.ucode.frag",
+        "bytes": 21409
+      },
+      "disassembly_lines": 474
+    },
+    {
+      "hash": "8D372F8D8B1B4B2B",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_8D372F8D8B1B4B2B.ucode.bin.frag",
+        "bytes": 84
+      },
+      "dwords": 21,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_8D372F8D8B1B4B2B.ucode.frag",
+        "bytes": 456
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "90D98717D18972A6",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_90D98717D18972A6.ucode.bin.frag",
+        "bytes": 1296
+      },
+      "dwords": 324,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_90D98717D18972A6.ucode.frag",
+        "bytes": 7262
+      },
+      "disassembly_lines": 158
+    },
+    {
+      "hash": "93288CC78A99C992",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_93288CC78A99C992.ucode.bin.frag",
+        "bytes": 2676
+      },
+      "dwords": 669,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_93288CC78A99C992.ucode.frag",
+        "bytes": 20068
+      },
+      "disassembly_lines": 443
+    },
+    {
+      "hash": "94ECFB846B1F71FF",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_94ECFB846B1F71FF.ucode.bin.vert",
+        "bytes": 408
+      },
+      "dwords": 102,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_94ECFB846B1F71FF.ucode.vert",
+        "bytes": 1910
+      },
+      "disassembly_lines": 43
+    },
+    {
+      "hash": "95753D44B10A2377",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_95753D44B10A2377.ucode.bin.frag",
+        "bytes": 60
+      },
+      "dwords": 15,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_95753D44B10A2377.ucode.frag",
+        "bytes": 209
+      },
+      "disassembly_lines": 6
+    },
+    {
+      "hash": "979CEE568FDEFF87",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_979CEE568FDEFF87.ucode.bin.frag",
+        "bytes": 336
+      },
+      "dwords": 84,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_979CEE568FDEFF87.ucode.frag",
+        "bytes": 1749
+      },
+      "disassembly_lines": 38
+    },
+    {
+      "hash": "9B43FEA87E2CBDD7",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_9B43FEA87E2CBDD7.ucode.bin.frag",
+        "bytes": 3600
+      },
+      "dwords": 900,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_9B43FEA87E2CBDD7.ucode.frag",
+        "bytes": 27001
+      },
+      "disassembly_lines": 596
+    },
+    {
+      "hash": "9D3744E8BF26B0BB",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_9D3744E8BF26B0BB.ucode.bin.vert",
+        "bytes": 696
+      },
+      "dwords": 174,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_9D3744E8BF26B0BB.ucode.vert",
+        "bytes": 3447
+      },
+      "disassembly_lines": 73
+    },
+    {
+      "hash": "A3A32095300D1B21",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_A3A32095300D1B21.ucode.bin.frag",
+        "bytes": 2832
+      },
+      "dwords": 708,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_A3A32095300D1B21.ucode.frag",
+        "bytes": 21304
+      },
+      "disassembly_lines": 469
+    },
+    {
+      "hash": "A4874DA9726D3E00",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_A4874DA9726D3E00.ucode.bin.vert",
+        "bytes": 408
+      },
+      "dwords": 102,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_A4874DA9726D3E00.ucode.vert",
+        "bytes": 2222
+      },
+      "disassembly_lines": 44
+    },
+    {
+      "hash": "A4A965C189287B99",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_A4A965C189287B99.ucode.bin.frag",
+        "bytes": 36
+      },
+      "dwords": 9,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_A4A965C189287B99.ucode.frag",
+        "bytes": 95
+      },
+      "disassembly_lines": 3
+    },
+    {
+      "hash": "A502CA087FE6CF7C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_A502CA087FE6CF7C.ucode.bin.vert",
+        "bytes": 612
+      },
+      "dwords": 153,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_A502CA087FE6CF7C.ucode.vert",
+        "bytes": 3019
+      },
+      "disassembly_lines": 62
+    },
+    {
+      "hash": "A54070B6AFF06523",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_A54070B6AFF06523.ucode.bin.frag",
+        "bytes": 480
+      },
+      "dwords": 120,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_A54070B6AFF06523.ucode.frag",
+        "bytes": 2515
+      },
+      "disassembly_lines": 56
+    },
+    {
+      "hash": "A6F144576A05AC43",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_A6F144576A05AC43.ucode.bin.frag",
+        "bytes": 2712
+      },
+      "dwords": 678,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_A6F144576A05AC43.ucode.frag",
+        "bytes": 20139
+      },
+      "disassembly_lines": 448
+    },
+    {
+      "hash": "A8F80A96B3ACB522",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_A8F80A96B3ACB522.ucode.bin.vert",
+        "bytes": 480
+      },
+      "dwords": 120,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_A8F80A96B3ACB522.ucode.vert",
+        "bytes": 2554
+      },
+      "disassembly_lines": 52
+    },
+    {
+      "hash": "AA184FC3B96BE03E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_AA184FC3B96BE03E.ucode.bin.frag",
+        "bytes": 3648
+      },
+      "dwords": 912,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_AA184FC3B96BE03E.ucode.frag",
+        "bytes": 27349
+      },
+      "disassembly_lines": 603
+    },
+    {
+      "hash": "AB063F11C0091DE9",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_AB063F11C0091DE9.ucode.bin.vert",
+        "bytes": 828
+      },
+      "dwords": 207,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_AB063F11C0091DE9.ucode.vert",
+        "bytes": 4011
+      },
+      "disassembly_lines": 84
+    },
+    {
+      "hash": "AC1ACAECC7AD7C8B",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_AC1ACAECC7AD7C8B.ucode.bin.frag",
+        "bytes": 408
+      },
+      "dwords": 102,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_AC1ACAECC7AD7C8B.ucode.frag",
+        "bytes": 2031
+      },
+      "disassembly_lines": 43
+    },
+    {
+      "hash": "AD911182537B5E17",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_AD911182537B5E17.ucode.bin.frag",
+        "bytes": 540
+      },
+      "dwords": 135,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_AD911182537B5E17.ucode.frag",
+        "bytes": 2415
+      },
+      "disassembly_lines": 51
+    },
+    {
+      "hash": "AE273D0F2E4BFC40",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_AE273D0F2E4BFC40.ucode.bin.frag",
+        "bytes": 1968
+      },
+      "dwords": 492,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_AE273D0F2E4BFC40.ucode.frag",
+        "bytes": 10175
+      },
+      "disassembly_lines": 205
+    },
+    {
+      "hash": "B154D7EB7AA08A97",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B154D7EB7AA08A97.ucode.bin.frag",
+        "bytes": 600
+      },
+      "dwords": 150,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B154D7EB7AA08A97.ucode.frag",
+        "bytes": 3432
+      },
+      "disassembly_lines": 66
+    },
+    {
+      "hash": "B3CA8202059B4F3B",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B3CA8202059B4F3B.ucode.bin.vert",
+        "bytes": 132
+      },
+      "dwords": 33,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B3CA8202059B4F3B.ucode.vert",
+        "bytes": 668
+      },
+      "disassembly_lines": 13
+    },
+    {
+      "hash": "B47ACFCF3BC0BD3E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B47ACFCF3BC0BD3E.ucode.bin.frag",
+        "bytes": 120
+      },
+      "dwords": 30,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B47ACFCF3BC0BD3E.ucode.frag",
+        "bytes": 486
+      },
+      "disassembly_lines": 12
+    },
+    {
+      "hash": "B4DA3D9F9833B39B",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B4DA3D9F9833B39B.ucode.bin.vert",
+        "bytes": 576
+      },
+      "dwords": 144,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B4DA3D9F9833B39B.ucode.vert",
+        "bytes": 2851
+      },
+      "disassembly_lines": 59
+    },
+    {
+      "hash": "B6953FA6985BA213",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B6953FA6985BA213.ucode.bin.vert",
+        "bytes": 120
+      },
+      "dwords": 30,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B6953FA6985BA213.ucode.vert",
+        "bytes": 680
+      },
+      "disassembly_lines": 12
+    },
+    {
+      "hash": "B6C9863F710683EC",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B6C9863F710683EC.ucode.bin.vert",
+        "bytes": 96
+      },
+      "dwords": 24,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B6C9863F710683EC.ucode.vert",
+        "bytes": 308
+      },
+      "disassembly_lines": 10
+    },
+    {
+      "hash": "B7B0A5030652925C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B7B0A5030652925C.ucode.bin.vert",
+        "bytes": 768
+      },
+      "dwords": 192,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B7B0A5030652925C.ucode.vert",
+        "bytes": 3973
+      },
+      "disassembly_lines": 82
+    },
+    {
+      "hash": "B825B7F62DD3FC97",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B825B7F62DD3FC97.ucode.bin.vert",
+        "bytes": 360
+      },
+      "dwords": 90,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B825B7F62DD3FC97.ucode.vert",
+        "bytes": 1870
+      },
+      "disassembly_lines": 39
+    },
+    {
+      "hash": "B876C194442EF091",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B876C194442EF091.ucode.bin.frag",
+        "bytes": 756
+      },
+      "dwords": 189,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B876C194442EF091.ucode.frag",
+        "bytes": 3887
+      },
+      "disassembly_lines": 79
+    },
+    {
+      "hash": "B8D207BDC83335DE",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_B8D207BDC83335DE.ucode.bin.vert",
+        "bytes": 1536
+      },
+      "dwords": 384,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_B8D207BDC83335DE.ucode.vert",
+        "bytes": 8369
+      },
+      "disassembly_lines": 169
+    },
+    {
+      "hash": "BA6BFA9234F776E9",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_BA6BFA9234F776E9.ucode.bin.frag",
+        "bytes": 516
+      },
+      "dwords": 129,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_BA6BFA9234F776E9.ucode.frag",
+        "bytes": 2799
+      },
+      "disassembly_lines": 58
+    },
+    {
+      "hash": "BA71055C967387CB",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_BA71055C967387CB.ucode.bin.vert",
+        "bytes": 264
+      },
+      "dwords": 66,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_BA71055C967387CB.ucode.vert",
+        "bytes": 1427
+      },
+      "disassembly_lines": 30
+    },
+    {
+      "hash": "BAA6F4D0503EAB2E",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_BAA6F4D0503EAB2E.ucode.bin.vert",
+        "bytes": 792
+      },
+      "dwords": 198,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_BAA6F4D0503EAB2E.ucode.vert",
+        "bytes": 3879
+      },
+      "disassembly_lines": 81
+    },
+    {
+      "hash": "BBE2908EFE8977AE",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_BBE2908EFE8977AE.ucode.bin.frag",
+        "bytes": 2148
+      },
+      "dwords": 537,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_BBE2908EFE8977AE.ucode.frag",
+        "bytes": 15938
+      },
+      "disassembly_lines": 357
+    },
+    {
+      "hash": "BFA60EBFC29041D6",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_BFA60EBFC29041D6.ucode.bin.vert",
+        "bytes": 600
+      },
+      "dwords": 150,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_BFA60EBFC29041D6.ucode.vert",
+        "bytes": 3025
+      },
+      "disassembly_lines": 61
+    },
+    {
+      "hash": "C204A46127BB4C23",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C204A46127BB4C23.ucode.bin.vert",
+        "bytes": 1044
+      },
+      "dwords": 261,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C204A46127BB4C23.ucode.vert",
+        "bytes": 5101
+      },
+      "disassembly_lines": 104
+    },
+    {
+      "hash": "C2BF3803AD9A3D44",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C2BF3803AD9A3D44.ucode.bin.vert",
+        "bytes": 180
+      },
+      "dwords": 45,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C2BF3803AD9A3D44.ucode.vert",
+        "bytes": 958
+      },
+      "disassembly_lines": 18
+    },
+    {
+      "hash": "C30785C0AFCE7554",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C30785C0AFCE7554.ucode.bin.frag",
+        "bytes": 2892
+      },
+      "dwords": 723,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C30785C0AFCE7554.ucode.frag",
+        "bytes": 21740
+      },
+      "disassembly_lines": 481
+    },
+    {
+      "hash": "C36FB79437AB3E53",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C36FB79437AB3E53.ucode.bin.vert",
+        "bytes": 744
+      },
+      "dwords": 186,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C36FB79437AB3E53.ucode.vert",
+        "bytes": 3551
+      },
+      "disassembly_lines": 75
+    },
+    {
+      "hash": "C39B5D6BC65A4836",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C39B5D6BC65A4836.ucode.bin.vert",
+        "bytes": 816
+      },
+      "dwords": 204,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C39B5D6BC65A4836.ucode.vert",
+        "bytes": 3979
+      },
+      "disassembly_lines": 83
+    },
+    {
+      "hash": "C3ED65AAB3912474",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C3ED65AAB3912474.ucode.bin.frag",
+        "bytes": 192
+      },
+      "dwords": 48,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C3ED65AAB3912474.ucode.frag",
+        "bytes": 887
+      },
+      "disassembly_lines": 19
+    },
+    {
+      "hash": "C47C0B594B268B68",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C47C0B594B268B68.ucode.bin.frag",
+        "bytes": 60
+      },
+      "dwords": 15,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C47C0B594B268B68.ucode.frag",
+        "bytes": 210
+      },
+      "disassembly_lines": 6
+    },
+    {
+      "hash": "C4E05621F5C12191",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C4E05621F5C12191.ucode.bin.frag",
+        "bytes": 2220
+      },
+      "dwords": 555,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C4E05621F5C12191.ucode.frag",
+        "bytes": 16420
+      },
+      "disassembly_lines": 368
+    },
+    {
+      "hash": "C5E16C61BB0CF4B9",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C5E16C61BB0CF4B9.ucode.bin.frag",
+        "bytes": 3564
+      },
+      "dwords": 891,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C5E16C61BB0CF4B9.ucode.frag",
+        "bytes": 26855
+      },
+      "disassembly_lines": 591
+    },
+    {
+      "hash": "C65BAD6722ED6BCC",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C65BAD6722ED6BCC.ucode.bin.vert",
+        "bytes": 696
+      },
+      "dwords": 174,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C65BAD6722ED6BCC.ucode.vert",
+        "bytes": 3485
+      },
+      "disassembly_lines": 72
+    },
+    {
+      "hash": "C77F9D7511A35E6E",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C77F9D7511A35E6E.ucode.bin.frag",
+        "bytes": 72
+      },
+      "dwords": 18,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C77F9D7511A35E6E.ucode.frag",
+        "bytes": 343
+      },
+      "disassembly_lines": 9
+    },
+    {
+      "hash": "C863730F5C7E7C9B",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_C863730F5C7E7C9B.ucode.bin.vert",
+        "bytes": 1908
+      },
+      "dwords": 477,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_C863730F5C7E7C9B.ucode.vert",
+        "bytes": 11828
+      },
+      "disassembly_lines": 237
+    },
+    {
+      "hash": "CCC6F1544A2DEF66",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_CCC6F1544A2DEF66.ucode.bin.frag",
+        "bytes": 2124
+      },
+      "dwords": 531,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_CCC6F1544A2DEF66.ucode.frag",
+        "bytes": 15769
+      },
+      "disassembly_lines": 353
+    },
+    {
+      "hash": "CEB3B475750B0F9B",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_CEB3B475750B0F9B.ucode.bin.vert",
+        "bytes": 1212
+      },
+      "dwords": 303,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_CEB3B475750B0F9B.ucode.vert",
+        "bytes": 5954
+      },
+      "disassembly_lines": 120
+    },
+    {
+      "hash": "D36AE1F640E1CB52",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_D36AE1F640E1CB52.ucode.bin.vert",
+        "bytes": 816
+      },
+      "dwords": 204,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_D36AE1F640E1CB52.ucode.vert",
+        "bytes": 3953
+      },
+      "disassembly_lines": 84
+    },
+    {
+      "hash": "D3A37777593969BC",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_D3A37777593969BC.ucode.bin.frag",
+        "bytes": 120
+      },
+      "dwords": 30,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_D3A37777593969BC.ucode.frag",
+        "bytes": 579
+      },
+      "disassembly_lines": 14
+    },
+    {
+      "hash": "D973863B92250FF8",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_D973863B92250FF8.ucode.bin.frag",
+        "bytes": 84
+      },
+      "dwords": 21,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_D973863B92250FF8.ucode.frag",
+        "bytes": 350
+      },
+      "disassembly_lines": 9
+    },
+    {
+      "hash": "DC02B98890490A74",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_DC02B98890490A74.ucode.bin.vert",
+        "bytes": 516
+      },
+      "dwords": 129,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_DC02B98890490A74.ucode.vert",
+        "bytes": 2544
+      },
+      "disassembly_lines": 55
+    },
+    {
+      "hash": "DD69EE5B2EADFB3C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_DD69EE5B2EADFB3C.ucode.bin.vert",
+        "bytes": 1116
+      },
+      "dwords": 279,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_DD69EE5B2EADFB3C.ucode.vert",
+        "bytes": 6197
+      },
+      "disassembly_lines": 133
+    },
+    {
+      "hash": "DEFA98B2075F974F",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_DEFA98B2075F974F.ucode.bin.vert",
+        "bytes": 156
+      },
+      "dwords": 39,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_DEFA98B2075F974F.ucode.vert",
+        "bytes": 777
+      },
+      "disassembly_lines": 16
+    },
+    {
+      "hash": "DF4FE8E6D687BA06",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_DF4FE8E6D687BA06.ucode.bin.frag",
+        "bytes": 2760
+      },
+      "dwords": 690,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_DF4FE8E6D687BA06.ucode.frag",
+        "bytes": 20560
+      },
+      "disassembly_lines": 454
+    },
+    {
+      "hash": "E205C95195967F24",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_E205C95195967F24.ucode.bin.vert",
+        "bytes": 648
+      },
+      "dwords": 162,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_E205C95195967F24.ucode.vert",
+        "bytes": 3129
+      },
+      "disassembly_lines": 65
+    },
+    {
+      "hash": "E2F5537A55785903",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_E2F5537A55785903.ucode.bin.frag",
+        "bytes": 1704
+      },
+      "dwords": 426,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_E2F5537A55785903.ucode.frag",
+        "bytes": 9593
+      },
+      "disassembly_lines": 213
+    },
+    {
+      "hash": "E365207A8B5189C7",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_E365207A8B5189C7.ucode.bin.vert",
+        "bytes": 600
+      },
+      "dwords": 150,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_E365207A8B5189C7.ucode.vert",
+        "bytes": 3025
+      },
+      "disassembly_lines": 61
+    },
+    {
+      "hash": "E930BF323AE71FDC",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_E930BF323AE71FDC.ucode.bin.frag",
+        "bytes": 2916
+      },
+      "dwords": 729,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_E930BF323AE71FDC.ucode.frag",
+        "bytes": 21733
+      },
+      "disassembly_lines": 481
+    },
+    {
+      "hash": "EAA14D33A75C006C",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_EAA14D33A75C006C.ucode.bin.vert",
+        "bytes": 636
+      },
+      "dwords": 159,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_EAA14D33A75C006C.ucode.vert",
+        "bytes": 3077
+      },
+      "disassembly_lines": 64
+    },
+    {
+      "hash": "EC1A3FAD624C8CE4",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_EC1A3FAD624C8CE4.ucode.bin.frag",
+        "bytes": 756
+      },
+      "dwords": 189,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_EC1A3FAD624C8CE4.ucode.frag",
+        "bytes": 3754
+      },
+      "disassembly_lines": 77
+    },
+    {
+      "hash": "F1F6EAAAEA86FA9B",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_F1F6EAAAEA86FA9B.ucode.bin.vert",
+        "bytes": 648
+      },
+      "dwords": 162,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_F1F6EAAAEA86FA9B.ucode.vert",
+        "bytes": 3119
+      },
+      "disassembly_lines": 67
+    },
+    {
+      "hash": "F3A77504C9B1E580",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_F3A77504C9B1E580.ucode.bin.vert",
+        "bytes": 1632
+      },
+      "dwords": 408,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_F3A77504C9B1E580.ucode.vert",
+        "bytes": 9482
+      },
+      "disassembly_lines": 205
+    },
+    {
+      "hash": "F42391F50A510685",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_F42391F50A510685.ucode.bin.frag",
+        "bytes": 696
+      },
+      "dwords": 174,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_F42391F50A510685.ucode.frag",
+        "bytes": 3640
+      },
+      "disassembly_lines": 73
+    },
+    {
+      "hash": "F56EEA8A7B8AA3BE",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_F56EEA8A7B8AA3BE.ucode.bin.vert",
+        "bytes": 132
+      },
+      "dwords": 33,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_F56EEA8A7B8AA3BE.ucode.vert",
+        "bytes": 687
+      },
+      "disassembly_lines": 13
+    },
+    {
+      "hash": "F65238E6A346DD78",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_F65238E6A346DD78.ucode.bin.frag",
+        "bytes": 2736
+      },
+      "dwords": 684,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_F65238E6A346DD78.ucode.frag",
+        "bytes": 20426
+      },
+      "disassembly_lines": 451
+    },
+    {
+      "hash": "FDF135FB511EB9F6",
+      "stage": "frag",
+      "binary": {
+        "path": "re5_shader_ucode/shader_FDF135FB511EB9F6.ucode.bin.frag",
+        "bytes": 180
+      },
+      "dwords": 45,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_FDF135FB511EB9F6.ucode.frag",
+        "bytes": 613
+      },
+      "disassembly_lines": 16
+    },
+    {
+      "hash": "FFD88FEAAFC646C0",
+      "stage": "vert",
+      "binary": {
+        "path": "re5_shader_ucode/shader_FFD88FEAAFC646C0.ucode.bin.vert",
+        "bytes": 432
+      },
+      "dwords": 108,
+      "disassembly": {
+        "path": "re5_shader_ucode/shader_FFD88FEAAFC646C0.ucode.vert",
+        "bytes": 2082
+      },
+      "disassembly_lines": 45
+    }
+  ]
+}
