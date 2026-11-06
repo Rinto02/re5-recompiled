@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.hardware.display.DisplayManager;
 import android.view.Display;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,6 +106,7 @@ final class GameOptions {
     static final String REFLECTION_STAGGER = "reflection_stagger";
     // Diagnostics (About page)
     static final String GPU_MEASUREMENTS = "gpu_measurements";  // re5_nativo_medir_gpu: GPU times in the logs
+    static final String DUMP_SHADERS = "dump_shaders";        // guest Xenos shader microcode for native-renderer research
     static final String VERBOSE_LOG = "verbose_log";  // log_detalhado: every repeated message (stubs, textures)
     static final String ROOT_PROFILE = "root_profile";  // one simpleperf profile in the next game (root)
     static final String ONE_PASS = "one_pass";                // re5_uma_faixa: the scene in one pass, not 3 tiles
@@ -534,6 +536,11 @@ final class GameOptions {
 
     static List<String> arguments(Context context) {
         List<String> args = new ArrayList<>();
+        if (flag(context, DUMP_SHADERS)) {
+            File directory = context.getExternalFilesDir(null);
+            if (directory == null) directory = context.getFilesDir();
+            args.add("--dump_shaders=" + new File(directory, "re5_shader_ucode").getAbsolutePath());
+        }
         args.add("--audio_ganancia_pct=" + get(context, VOLUME));
         // Repeated messages (kernel stubs, resolved textures): the first 20 of each unless the player asks for all.
         args.add("--log_detalhado=" + flag(context, VERBOSE_LOG));

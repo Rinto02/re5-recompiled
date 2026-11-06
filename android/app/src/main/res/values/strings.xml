@@ -21,6 +21,8 @@
     <string name="back_to_the_extracted_folder">Back to the extracted folder</string>
     <string name="balanced">Balanced</string>
     <string name="cancel">Cancel</string>
+    <string name="capture_guest_shaders">Capture guest shaders</string>
+    <string name="capture_guest_shaders_description">For RE5 native-renderer research. Turn this on, then run a scene with Emulated selected. Loaded vertex and pixel shader microcode and disassembly are saved under Android/data/com.re5recomp.android/files/re5_shader_ucode on this device. These files are not included in diagnostic reports.</string>
     <string name="car_reflections">Car reflections</string>
     <string name="change_the_game_folder">Change the game folder</string>
     <string name="change_the_iso">Change the ISO</string>
